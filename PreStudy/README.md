@@ -109,6 +109,30 @@ Die Waage liefert daher im Mittel einen richtigen Wert, besitzt aber eine gering
 
 Eine hohe Präzision bedeutet nicht automatisch eine hohe Richtigkeit. Für zuverlässige Messungen sind sowohl eine geringe systematische Abweichung als auch eine geringe Streuung wichtig.
 
+### Guiding Question 5: I²C Anticipation
+
+Bei der I²C-Kommunikation können mehrere Sensoren dieselben zwei Signalleitungen verwenden:
+
+- **SDA (Serial Data):** Datenübertragung
+- **SCL (Serial Clock):** Taktsignal
+
+Wenn mehrere Sensoren an denselben Leitungen angeschlossen sind, muss der Mikrocontroller erkennen können, mit welchem Sensor er kommunizieren möchte.
+
+Dafür besitzt jeder I²C-Sensor eine Geräteadresse.
+
+**Beispiel:**
+
+- VL53L0X: I²C-Adresse 0x29 (7 Bit)
+- MPR121: I²C-Adresse 0x5A (Standardadresse, 7 Bit)
+
+Der Mikrocontroller sendet die Adresse des gewünschten Sensors. Normalerweise antwortet nur das Gerät mit der passenden Adresse.
+
+Wenn zwei Sensoren dieselbe Adresse verwenden, kann ein Adresskonflikt entstehen.
+
+**Fazit:**
+
+Die I²C-Adresse ermöglicht die eindeutige Auswahl eines Sensors auf einem gemeinsamen Bus. Dadurch können mehrere Sensoren über dieselben Daten- und Taktleitungen kommunizieren.
+
 ## Task Datasheet reading
 ### 1. VL53L0X – Time-of-Flight-Distanzsensor
 
