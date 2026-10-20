@@ -65,6 +65,24 @@ Die Auflösung beschreibt jedoch nicht direkt die Messgenauigkeit. Die Genauigke
 
 **Fazit:** Eine höhere ADC-Auflösung ermöglicht eine feinere Quantisierung, garantiert aber keine genaueren Messwerte.
 
+### Guiding Question 3: Datasheet
+
+**Gewählter Sensor: VL53L0X (Time-of-Flight-Distanzsensor)**
+
+Der VL53L0X verwendet eine **I²C-Schnittstelle** mit einer Übertragungsgeschwindigkeit von bis zu 400 kHz.
+
+Die standardmäßige I²C-Adresse beträgt **0x29 (7 Bit)** beziehungsweise **0x52 (8-Bit-Schreibadresse)**.
+
+Die Messleistung hängt von der Entfernung, dem Reflexionsgrad des Messobjekts und den Umgebungslichtbedingungen ab.
+
+Laut Datenblatt beträgt die Standardabweichung der Messwerte bei einer Entfernung von 120 cm zu einem weißen Objekt (88 % Reflexionsgrad) im Innenbereich ungefähr 4 %. Dabei wird ein Messzeitbudget von 33 ms verwendet.
+
+Dieser Wert beschreibt die **Präzision (Messstreuung)** und nicht unmittelbar die absolute Messgenauigkeit.
+
+**Fazit:** Bei der Bewertung eines Sensors müssen die Messbedingungen berücksichtigt werden. Eine einzelne Prozentangabe reicht nicht aus, um seine Messgenauigkeit vollständig zu beschreiben.
+
+**Quelle:** STMicroelectronics, *VL53L0X Datasheet*, DS11555 Rev. 6.
+
 ## Task Datasheet reading
 ### 1. VL53L0X – Time-of-Flight-Distanzsensor
 
