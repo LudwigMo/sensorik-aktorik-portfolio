@@ -133,6 +133,30 @@ Wenn zwei Sensoren dieselbe Adresse verwenden, kann ein Adresskonflikt entstehen
 
 Die I²C-Adresse ermöglicht die eindeutige Auswahl eines Sensors auf einem gemeinsamen Bus. Dadurch können mehrere Sensoren über dieselben Daten- und Taktleitungen kommunizieren.
 
+### Guiding Question 6: Actuator Choice
+
+**Aufgabe:** Ein kleiner Türverschluss soll alle paar Minuten bewegt werden.
+
+**Meine Wahl: Servomotor**
+
+Ich würde einen Servomotor verwenden, weil er sich einfach steuern lässt und eine bestimmte Winkelposition anfahren kann.
+
+**Begründung:**
+
+1. **Drehmoment:** Ein geeigneter Servomotor kann genügend Drehmoment erzeugen, um einen kleinen Türverschluss über einen Hebelmechanismus zu bewegen.
+2. **Einfache Steuerung:** Der Mikrocontroller kann die gewünschte Winkelposition über ein Steuersignal vorgeben. Eine zusätzliche externe Positionsregelung ist normalerweise nicht erforderlich.
+3. **Leistungsaufnahme:** Da der Verschluss nur alle paar Minuten bewegt werden muss, kann der Motor zwischen den Bewegungen bei geeigneter Mechanik abgeschaltet werden. Wenn er eine Position aktiv halten muss, benötigt er möglicherweise weiterhin Strom.
+
+**Nicht bevorzugt: Einfacher DC-Motor**
+
+Einen einfachen Gleichstrommotor würde ich für diese Aufgabe nicht bevorzugen.
+
+Er kann zwar eine Drehbewegung erzeugen, aber seine Position lässt sich ohne zusätzliche Sensoren oder Endschalter nicht zuverlässig bestimmen. Außerdem können ein Getriebe und eine zusätzliche Motorsteuerung erforderlich sein.
+
+**Fazit:**
+
+Für einen kleinen Türverschluss ist ein Servomotor eine geeignete Wahl, weil er eine einfache Positionssteuerung ermöglicht und bei passender Auslegung genügend Drehmoment bereitstellt.
+
 ## Task Datasheet reading
 ### 1. VL53L0X – Time-of-Flight-Distanzsensor
 
