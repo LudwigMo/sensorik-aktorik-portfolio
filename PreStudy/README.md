@@ -83,6 +83,32 @@ Dieser Wert beschreibt die **Präzision (Messstreuung)** und nicht unmittelbar d
 
 **Quelle:** STMicroelectronics, *VL53L0X Datasheet*, DS11555 Rev. 6.
 
+### Guiding Question 4: Accuracy vs. Precision
+
+**Accuracy (Richtigkeit)** beschreibt, wie nahe ein Messergebnis am tatsächlichen Wert liegt.
+
+**Precision (Präzision)** beschreibt, wie stark die Ergebnisse bei wiederholten Messungen übereinstimmen.
+
+**Beispiel 1: Hohe Präzision, aber geringe Richtigkeit**
+
+Eine falsch kalibrierte digitale Personenwaage zeigt bei einem tatsächlichen Körpergewicht von 80,0 kg wiederholt ungefähr 82,0 kg an.
+
+Die Messwerte liegen sehr nahe beieinander, weichen jedoch systematisch vom tatsächlichen Wert ab.
+
+Die Waage ist daher präzise, aber nicht richtig.
+
+**Beispiel 2: Hohe Richtigkeit im Mittel, aber geringe Präzision**
+
+Eine andere digitale Personenwaage zeigt bei wiederholten Messungen beispielsweise 78, 79, 80, 81 und 82 kg an, obwohl das tatsächliche Gewicht 80,0 kg beträgt.
+
+Der Mittelwert beträgt 80,0 kg und stimmt mit dem tatsächlichen Wert überein. Die einzelnen Messwerte streuen jedoch stark.
+
+Die Waage liefert daher im Mittel einen richtigen Wert, besitzt aber eine geringe Präzision.
+
+**Fazit:**
+
+Eine hohe Präzision bedeutet nicht automatisch eine hohe Richtigkeit. Für zuverlässige Messungen sind sowohl eine geringe systematische Abweichung als auch eine geringe Streuung wichtig.
+
 ## Task Datasheet reading
 ### 1. VL53L0X – Time-of-Flight-Distanzsensor
 
