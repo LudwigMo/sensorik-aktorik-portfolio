@@ -409,6 +409,10 @@ NXP / Freescale Semiconductor, *MPR121 – Proximity Capacitive Touch Sensor Con
 
 **Simulationslink:** https://wokwi.com/projects/478437962485792769
 
+**Screenshot der Wokwi-Simulation:**
+
+![Wokwi-Simulation mit ESP32, Potentiometer und LED](pictures/Wokwi-simulation.png)
+  
 **Ziel:**
 
 Das Ziel dieser Simulation ist es, die Analog-Digital-Wandlung (ADC) und die Steuerung einer LED mit Pulsweitenmodulation (PWM) zu untersuchen.
