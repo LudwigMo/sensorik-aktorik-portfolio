@@ -123,6 +123,113 @@ Die Messleistung hängt jedoch von der Entfernung, dem Reflexionsgrad des Messob
 
 **Quelle:** STMicroelectronics, *VL53L0X Datasheet*, DS11555, Revision 6, insbesondere Kapitel 2 und 6.
 
+### 2. MPR121 – Kapazitiver Berührungssensor
+
+**Hersteller:** NXP / Freescale Semiconductor  
+**Sensortyp:** Kapazitiver Berührungs- und Näherungssensor-Controller  
+**Datenblatt:** MPR121 – Proximity Capacitive Touch Sensor Controller
+
+#### 2.1 Funktionsprinzip
+
+Der MPR121 ist ein kapazitiver Berührungssensor. Er erkennt Berührungen und Annäherungen durch Änderungen der elektrischen Kapazität.
+
+Wenn sich ein Finger einer Elektrode nähert oder sie berührt, verändert sich die Kapazität. Diese Änderung wird vom Sensor erfasst, digital verarbeitet und mit einem Referenzwert (Baseline) verglichen.
+
+#### 2.2 Technische Daten
+
+| Parameter | Wert |
+|---|---|
+| Messgröße | Elektrische Kapazität bzw. Kapazitätsänderung |
+| Messbereich | Ca. 10 pF bis über 2000 pF |
+| Kapazitätsauflösung | Bis zu 0,01 pF |
+| ADC-Auflösung | 10 Bit (1024 digitale Werte) |
+| Messgenauigkeit | Keine allgemeine absolute Genauigkeit angegeben |
+| Abtastintervall | 1–128 ms, standardmäßig 16 ms |
+| Versorgungsspannung | 1,71–3,6 V |
+| Betriebstemperatur | −40 bis +85 °C |
+| Schnittstelle | I²C |
+| I²C-Adresse | 0x5A–0x5D (konfigurierbar) |
+| Sensorkanäle | 12 Elektroden und ein zusätzlicher Näherungskanal |
+
+#### 2.3 Messbereich und Auflösung
+
+Der MPR121 kann Kapazitäten von ungefähr 10 pF bis über 2000 pF erfassen.
+
+Laut Datenblatt beträgt die Kapazitätsauflösung bis zu 0,01 pF.
+
+Der Sensor verwendet einen internen 10-Bit-ADC, der theoretisch 1024 digitale Werte unterscheiden kann.
+
+Eine hohe Auflösung bedeutet jedoch nicht automatisch eine hohe Messgenauigkeit.
+
+#### 2.4 Abtastintervall und Reaktionszeit
+
+Das Elektroden-Abtastintervall (Electrode Sample Interval, ESI) kann zwischen 1 ms und 128 ms eingestellt werden.
+
+Der Standardwert beträgt 16 ms. Dies entspricht einer nominellen Abtastfrequenz von 62,5 Hz.
+
+Die tatsächliche Reaktionszeit hängt von der Abtastung, der digitalen Filterung und der Entprellung (Debouncing) ab.
+
+Die zusätzliche Verzögerung durch die Entprellung kann mit folgender Formel beschrieben werden:
+
+\[
+t_{\mathrm{Debounce}}=ESI\cdot SFI\cdot DT
+\]
+
+Beispielsweise ergibt sich bei ESI = 16 ms, SFI = 4 und DT = 2 eine Verzögerung von 128 ms.
+
+Dieser Wert ist ein Berechnungsbeispiel und keine feste Reaktionszeit des Sensors.
+
+#### 2.5 Messgenauigkeit und Messbedingungen
+
+Das Datenblatt gibt eine Kapazitätsauflösung von bis zu 0,01 pF an. Eine allgemeine absolute Messgenauigkeit wird jedoch nicht eindeutig angegeben.
+
+Die Berührungserkennung hängt unter anderem von folgenden Faktoren ab:
+
+- Größe und Form der Elektroden
+- Abstand zwischen Finger und Elektrode
+- Elektrische Störungen und Umgebungsbedingungen
+- Konfiguration der Filter und Schwellwerte
+- Abtastintervall
+
+Der Sensor unterstützt eine automatische Anpassung der Referenzwerte, um Veränderungen der Messbedingungen zu berücksichtigen.
+
+Der spezifizierte Betriebstemperaturbereich beträgt −40 °C bis +85 °C. Daraus lässt sich jedoch keine konkrete temperaturabhängige Messabweichung ableiten.
+
+#### 2.6 Schnittstelle und Signalverarbeitung
+
+Der MPR121 verwendet eine I²C-Schnittstelle zur Kommunikation mit einem Mikrocontroller.
+
+Die I²C-Adresse kann zwischen 0x5A und 0x5D konfiguriert werden.
+
+Die Kapazitätsänderungen werden intern erfasst und durch einen 10-Bit-ADC digitalisiert.
+
+Anschließend werden die Messwerte gefiltert und mit Referenzwerten sowie Schwellwerten verglichen.
+
+**Signalkette:**
+
+Berührung → Kapazitätsänderung → Kapazitätsmessung → 10-Bit-ADC → digitale Filterung → Schwellwertvergleich → I²C → Mikrocontroller
+
+#### 2.7 Anwendungen
+
+Typische Anwendungen sind:
+
+- Kapazitive Touch-Tasten
+- Berührungsempfindliche Bedienfelder
+- Näherungserkennung
+- Interaktive Steuerungssysteme
+
+#### 2.8 Fazit
+
+Der MPR121 ist ein digitaler Controller zur Erkennung von Berührungen und Annäherungen.
+
+Seine Vorteile sind die 12 unabhängigen Elektrodeneingänge, die hohe Empfindlichkeit und die einfache Kommunikation über I²C.
+
+Die zuverlässige Berührungserkennung hängt jedoch von der Elektrodengeometrie, den Umgebungsbedingungen und der richtigen Konfiguration der Filter und Schwellwerte ab.
+
+### Quellen
+
+NXP / Freescale Semiconductor, *MPR121 – Proximity Capacitive Touch Sensor Controller*, Datenblatt, insbesondere Abschnitte zu Device Operation, Electrode Filtered Data, Debounce und Filter Configuration.
+
 ## Task Simulation
 
 ## Task Project abstract
