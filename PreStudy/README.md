@@ -41,6 +41,30 @@ Das berechnete Ergebnis wird auf dem Display angezeigt, zum Beispiel 80,0 kg.
 
 Eine digitale Waage misst die Masse nicht direkt. Sie erfasst zunächst eine mechanische Kraft und wandelt diese über mehrere Schritte in einen digitalen Messwert um.
 
+### Guiding Question 2: Wokwi Observation
+
+In meiner Wokwi-Simulation habe ich die ADC-Auflösung des ESP32 mit 8 Bit, 10 Bit und 12 Bit untersucht.
+
+Die Anzahl der digitalen Stufen berechnet sich mit:
+
+\[
+N = 2^n
+\]
+
+Dabei ist \(n\) die Anzahl der Bits.
+
+| ADC-Auflösung | Anzahl der Stufen | Wertebereich |
+|---|---|---|
+| 8 Bit | 256 | 0–255 |
+| 10 Bit | 1024 | 0–1023 |
+| 12 Bit | 4096 | 0–4095 |
+
+Bei einer höheren ADC-Auflösung kann die analoge Eingangsspannung feiner digitalisiert werden.
+
+Die Auflösung beschreibt jedoch nicht direkt die Messgenauigkeit. Die Genauigkeit kann beispielsweise durch elektrisches Rauschen, Offsetfehler oder eine ungenaue Referenzspannung beeinflusst werden.
+
+**Fazit:** Eine höhere ADC-Auflösung ermöglicht eine feinere Quantisierung, garantiert aber keine genaueren Messwerte.
+
 ## Task Datasheet reading
 ### 1. VL53L0X – Time-of-Flight-Distanzsensor
 
