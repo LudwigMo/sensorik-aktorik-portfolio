@@ -199,6 +199,22 @@ Dabei müssen der ESP32 und die externe Stromversorgung eine gemeinsame Masse (G
 
 Der LED-Streifen benötigt bei voller weißer Helligkeit ungefähr **1,8 A** beziehungsweise **9 W**. Deshalb sollte er nicht direkt über den 5-V-Pin des ESP32 versorgt werden.
 
+### Guiding Question 8: Project Abstract
+
+**Projektidee: Intelligente Parkplatzschranke**
+
+Ich möchte eine intelligente Parkplatzschranke mit einem ESP32 entwickeln.
+
+Dafür verwende ich zwei Sensoren: den **VL53L0X** zur Fahrzeugerkennung und den **MPR121** zur manuellen Freigabe.
+
+Als Aktor wird ein **Servomotor** eingesetzt, der den Schrankenarm öffnet und schließt.
+
+Der ESP32 verarbeitet die Sensorsignale und steuert den Servomotor.
+
+Das Projekt soll zeigen, wie Sensoren und Aktoren in einem einfachen automatisierten System zusammenarbeiten.
+
+Eine ausführlichere Beschreibung befindet sich im Abschnitt **Task Project abstract**.
+
 ## Task Datasheet reading
 ### 1. VL53L0X – Time-of-Flight-Distanzsensor
 
@@ -445,3 +461,22 @@ Eine höhere ADC-Auflösung ermöglicht eine feinere Unterscheidung von Eingangs
 Eine grobe Quantisierung kann zu sichtbaren Sprüngen bei der LED-Helligkeit führen.
 
 ## Task Project abstract
+### Intelligente Parkplatzschranke mit ESP32
+
+In meinem Projekt möchte ich eine intelligente Parkplatzschranke entwickeln.
+
+Das System verwendet zwei Sensoren, einen Servomotor und einen ESP32-Mikrocontroller.
+
+Der **VL53L0X-Abstandssensor** erkennt, ob sich ein Fahrzeug der Schranke nähert.
+
+Der **MPR121-Berührungssensor** dient als manuelle Freigabetaste.
+
+Der ESP32 verarbeitet die Signale beider Sensoren und steuert den Servomotor.
+
+Wenn ein Fahrzeug erkannt und die Freigabetaste berührt wird, öffnet der Servomotor die Schranke.
+
+Nach der Freigabe des überwachten Bereichs kann die Schranke nach einer kurzen Wartezeit wieder geschlossen werden.
+
+Ziel des Projekts ist es, das Zusammenspiel von Sensoren, Mikrocontroller und Aktor praktisch zu untersuchen.
+
+Das System ist als vereinfachter Lernprototyp vorgesehen.
