@@ -404,6 +404,11 @@ Die zuverlässige Berührungserkennung hängt jedoch von der Elektrodengeometrie
 
 NXP / Freescale Semiconductor, *MPR121 – Proximity Capacitive Touch Sensor Controller*, Datenblatt, insbesondere Abschnitte zu Device Operation, Electrode Filtered Data, Debounce und Filter Configuration.
 
+**Datenblätter:**
+
+- [VL53L0X – STMicroelectronics](https://www.st.com/resource/en/datasheet/vl53l0x.pdf)
+- [MPR121 – NXP](https://www.nxp.com/docs/en/data-sheet/MPR121.pdf)
+
 ## Task Simulation
 ### Wokwi-Simulation: ESP32 mit Potentiometer und LED
 
