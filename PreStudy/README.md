@@ -157,6 +157,48 @@ Er kann zwar eine Drehbewegung erzeugen, aber seine Position lässt sich ohne zu
 
 Für einen kleinen Türverschluss ist ein Servomotor eine geeignete Wahl, weil er eine einfache Positionssteuerung ermöglicht und bei passender Auslegung genügend Drehmoment bereitstellt.
 
+### Guiding Question 7: LED Power Math
+
+**Aufgabe:** Ein WS2812-LED-Streifen besteht aus 30 LEDs. Jede LED benötigt bei maximaler Helligkeit und weißem Licht ungefähr 60 mA.
+
+**1. Berechnung des Gesamtstroms**
+
+Gegeben:
+
+- Anzahl der LEDs: 30
+- Strom pro LED: 60 mA
+- Versorgungsspannung: 5 V
+
+Der maximale Gesamtstrom beträgt:
+
+\[
+I_{\mathrm{gesamt}} = 30 \cdot 60\,\mathrm{mA}
+= 1800\,\mathrm{mA} = 1{,}8\,\mathrm{A}
+\]
+
+Die maximale elektrische Leistung beträgt:
+
+\[
+P = U \cdot I = 5\,\mathrm{V} \cdot 1{,}8\,\mathrm{A}
+= 9\,\mathrm{W}
+\]
+
+**2. Warum reicht der 5-V-Pin des Mikrocontrollers nicht aus?**
+
+Der 5-V-Pin eines ESP32-Entwicklungsboards ist normalerweise nicht dafür ausgelegt, einen LED-Streifen mit einer Stromaufnahme von 1,8 A direkt zu versorgen.
+
+Ein zu hoher Strom kann zu Spannungsabfällen, instabilem Betrieb oder einer Überlastung der Stromversorgung führen.
+
+**3. Geeignete Stromversorgung**
+
+Für den LED-Streifen sollte eine externe 5-V-Stromversorgung mit ausreichender Stromreserve verwendet werden, beispielsweise 5 V / 3 A.
+
+Dabei müssen der ESP32 und die externe Stromversorgung eine gemeinsame Masse (GND) besitzen.
+
+**Fazit:**
+
+Der LED-Streifen benötigt bei voller weißer Helligkeit ungefähr **1,8 A** beziehungsweise **9 W**. Deshalb sollte er nicht direkt über den 5-V-Pin des ESP32 versorgt werden.
+
 ## Task Datasheet reading
 ### 1. VL53L0X – Time-of-Flight-Distanzsensor
 
