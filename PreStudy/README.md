@@ -231,8 +231,6 @@ Die zuverlässige Berührungserkennung hängt jedoch von der Elektrodengeometrie
 NXP / Freescale Semiconductor, *MPR121 – Proximity Capacitive Touch Sensor Controller*, Datenblatt, insbesondere Abschnitte zu Device Operation, Electrode Filtered Data, Debounce und Filter Configuration.
 
 ## Task Simulation
-
-## Task Project abstract
 ### Wokwi-Simulation: ESP32 mit Potentiometer und LED
 
 **Simulationslink:** https://wokwi.com/projects/478437962485792769
@@ -287,3 +285,5 @@ Die Simulation zeigt den Zusammenhang zwischen analoger Spannung, ADC-Auflösung
 Eine höhere ADC-Auflösung ermöglicht eine feinere Unterscheidung von Eingangswerten, führt aber nicht automatisch zu einer höheren Messgenauigkeit.
 
 Eine grobe Quantisierung kann zu sichtbaren Sprüngen bei der LED-Helligkeit führen.
+
+## Task Project abstract
