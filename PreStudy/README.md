@@ -42,6 +42,86 @@ Das berechnete Ergebnis wird auf dem Display angezeigt, zum Beispiel 80,0 kg.
 Eine digitale Waage misst die Masse nicht direkt. Sie erfasst zunächst eine mechanische Kraft und wandelt diese über mehrere Schritte in einen digitalen Messwert um.
 
 ## Task Datasheet reading
+### 1. VL53L0X – Time-of-Flight-Distanzsensor
+
+**Hersteller:** STMicroelectronics  
+**Sensortyp:** Optischer Abstandssensor (Time-of-Flight, ToF)  
+**Datenblatt:** VL53L0X, DS11555 Rev 6
+
+#### 1.1 Funktionsprinzip
+
+Der VL53L0X ist ein optischer Abstandssensor. Er verwendet einen Infrarotlaser mit einer Wellenlänge von 940 nm.
+
+Der Sensor misst die Entfernung mithilfe des Time-of-Flight-Prinzips (ToF). Dabei wird die Laufzeit des reflektierten Lichts zur Bestimmung der Entfernung genutzt.
+
+#### 1.2 Technische Daten
+
+| Parameter | Wert |
+|---|---|
+| Messgröße | Abstand |
+| Messbereich | Bis zu 2 m, abhängig von den Messbedingungen |
+| Auflösung | Ausgabe in mm; tatsächliche Messauflösung nicht eindeutig angegeben |
+| Messgenauigkeit | Abhängig von Entfernung, Reflexion und Umgebungsbedingungen |
+| Messzeit | Typisch 30 ms im Standardmodus |
+| Versorgungsspannung | 2,6–3,5 V |
+| Betriebstemperatur | −20 bis +70 °C |
+| Schnittstelle | I²C, bis 400 kHz |
+| Laserwellenlänge | 940 nm |
+
+#### 1.3 Messgenauigkeit und Messbedingungen
+
+Die Messgenauigkeit hängt von verschiedenen Faktoren ab:
+
+- Entfernung zum Messobjekt
+- Reflexionsgrad der Oberfläche
+- Umgebungslicht
+- Temperatur und Versorgungsspannung
+
+Laut Datenblatt beträgt die Standardabweichung bei einer Entfernung von 120 cm zu einem weißen Objekt (88 % Reflexion) im Innenbereich etwa 4 % bei einem Messzeitbudget von 33 ms.
+
+Bei einem grauen Objekt (17 % Reflexion) beträgt die Standardabweichung bei 70 cm etwa 7 %.
+
+Diese Werte beschreiben die Streuung der Messungen und nicht direkt den systematischen Messfehler.
+
+#### 1.4 Messprofile
+
+Der Sensor unterstützt verschiedene Messprofile:
+
+| Messprofil | Messzeitbudget | Anwendung |
+|---|---|---|
+| Standardmodus | 30 ms | Standardmessungen |
+| Hohe Genauigkeit | 200 ms | Präzise Messungen |
+| Große Reichweite | 33 ms | Größere Entfernungen bei günstigen Lichtbedingungen |
+| Hohe Geschwindigkeit | 20 ms | Schnelle Messungen |
+
+#### 1.5 Schnittstelle und Signalverarbeitung
+
+Der VL53L0X besitzt eine integrierte Signalverarbeitung und einen Mikrocontroller.
+
+Die gemessenen Entfernungswerte werden digital über die I²C-Schnittstelle an einen externen Mikrocontroller übertragen.
+
+**Signalkette:**
+
+Infrarotlaser → Reflexion am Messobjekt → SPAD-Detektor → interne Signalverarbeitung → I²C → Mikrocontroller
+
+#### 1.6 Anwendungen
+
+Typische Anwendungen sind:
+
+- Hinderniserkennung in Robotern
+- Abstandsmessung
+- Anwesenheitserkennung
+- Automatisierungssysteme
+
+#### 1.7 Fazit
+
+Der VL53L0X ist ein kompakter digitaler Abstandssensor mit integrierter Signalverarbeitung.
+
+Seine Vorteile sind die geringe Baugröße, die einfache I²C-Kommunikation und die berührungslose Abstandsmessung.
+
+Die Messleistung hängt jedoch von der Entfernung, dem Reflexionsgrad des Messobjekts und den Umgebungsbedingungen ab.
+
+**Quelle:** STMicroelectronics, *VL53L0X Datasheet*, DS11555, Revision 6, insbesondere Kapitel 2 und 6.
 
 ## Task Simulation
 
