@@ -35,3 +35,7 @@
 | Clock | Shared | Shared | No shared clock |
 | Addressing | Chip select | Device address | No built-in addressing |
 | Typical use | SD cards, displays | Sensors | Serial modules |
+
+### LLM Research Notes
+
+[View SPI LLM Research Notes](./spi-llm-research.md)
