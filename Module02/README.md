@@ -37,12 +37,18 @@ We are going to show here notes for Task 1, 2, 3, 4, and 5 to prove
 This task was executed by myself.
 
 <a id="task-2"></a>
-## Task 2 — `<short title>`
+## Task 2 — Bus Systems Survey (SPI)
 
 **Proves:** [LG2](#lg2)
 
-This task was executed by my partner. The implementation was about ...
-It is [here](https://github.com/partner/iot-portfolio/Module02/README.md#task-2).
+In this task, I researched the SPI
+(Serial Peripheral Interface) bus.
+I studied its history, wiring,
+communication principles, advantages,
+applications, and possible problems.
+
+**Portfolio evidence:**
+[SPI Bus Profile](./bus-spi.md)
 
 <a id="task-3"></a>
 ## Task 3 — `<short title>`
