@@ -55,7 +55,37 @@ applications, and possible problems.
 
 **Proves:** [LG3](#lg3)
 
-...
+ <a id="task-9"></a>
+## Task 9 — Build and Test an ESP32 Logic Analyzer
+
+**Proves:** Practical application of digital signal acquisition and measurement.
+
+In this task, I built a digital logic analyzer using an ESP32 and the open-source ESP32_LogicAnalyzer project by lmcapacho.
+
+I installed the firmware using Arduino IDE and connected the ESP32 to PulseView via the SUMP protocol.
+
+To test the logic analyzer, I used a second development board (ESP8266 D1 mini) to generate a square-wave signal of approximately 1 kHz.
+
+**Hardware connections:**
+- ESP8266 D5 (GPIO14) → ESP32 GPIO21 (CH0)
+- ESP8266 GND → ESP32 GND
+- ESP32 GPIO22 (CLK_OUT) → GPIO23 (CLK_IN)
+
+**Capture settings:**
+- Sampling rate: 200 kHz
+- Sample count: 64 k samples
+- Measured period: 1010 μs
+- Measured frequency: 990.10 Hz
+
+The logic analyzer successfully captured the square-wave signal. The measured frequency was close to the expected value of 1 kHz, with a deviation of approximately 0.99%.
+
+**Portfolio evidence:**
+- [Task 9 — Detailed Test Report](./scope-decision.md)
+- [ESP32 Logic Analyzer — Source Code](https://github.com/lmcapacho/ESP32_LogicAnalyzer)
+
+**Measurement screenshot:**
+
+![Task 9 – Square-wave measurement](./pictures/task9-square-wave-measurement.png)
 
 ## Reflection 2
 
