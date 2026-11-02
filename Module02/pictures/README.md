@@ -1,3 +1,2 @@
 
-
-![task 9–square-wave-measurement](./pictures/task9-square-wave-measurement.png)
+![Task 9 – Square-wave measurement](./task9-square-wave-measurement.png)
