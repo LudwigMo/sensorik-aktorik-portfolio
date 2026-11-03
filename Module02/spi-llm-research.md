@@ -1,4 +1,4 @@
-# Task 3 – SPI – LLM Research Notes
+# SPI – LLM Research Notes
 
 **Module:** 2 – Buses & I²C  
 **Task:** 2 – Bus Systems Survey  
