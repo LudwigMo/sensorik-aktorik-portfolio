@@ -91,7 +91,7 @@ The logic analyzer successfully captured the square-wave signal. The measured fr
 
 **Measurement screenshot:**
 
-![Task 9 – Square-wave measurement](./pictures/task9-square-wave-measurement.png)
+[Task 9 – Square-wave measurement](./pictures/task9-square-wave-measurement.png)
 
 #### I²C Protocol Decoding – Experimental Verification
 
@@ -124,7 +124,7 @@ The NACK response was expected because no I²C target device was connected at ad
 
 **Evidence:**
 
-![I²C protocol decoding in PulseView](./pictures/task9-i2c-decoding.png)
+[I²C protocol decoding in PulseView](./pictures/task9-i2c-decoding.png)
 
 **Source code:** [ESP8266 I²C Test](./ESP8266_I2C_Test.ino)
 
