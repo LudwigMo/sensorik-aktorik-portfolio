@@ -57,6 +57,7 @@ In this task, we researched the SPI (Serial Peripheral Interface) bus. We studie
 **Portfolio evidence:**
 
 - [SPI Bus Profile](./bus-spi.md)
+- [SPI – LLM Research Notes](./spi-llm-research.md)
 
 ## Task 3: Bus Systems Comparison
 
