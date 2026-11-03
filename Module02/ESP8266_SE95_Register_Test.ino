@@ -1,4 +1,3 @@
-
 #include <Wire.h>
 
 const uint8_t SE95_ADDR = 0x4F;
