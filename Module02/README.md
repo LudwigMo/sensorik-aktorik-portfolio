@@ -40,7 +40,7 @@ In this task, I researched the SPI(Serial Peripheral Interface) bus. I studied i
 [SPI Bus Profile](./bus-spi.md)
 
 <a id="task-3"></a>
-## Task 3 — `Bus Systems Comparison`
+## Task 3 — Bus Systems Comparison
 
 **Proves:** [LG3](#lg3)
 
@@ -50,7 +50,7 @@ In this task, I compared different communication bus systems, including SPI, I²
 
 <a id="task-5"></a>
 
-## Task 5 — `I²C Bus Scan`
+## Task 5 — I²C Bus Scan
 
 **Proves:** I²C communication, device addressing and bus scanning.
 
@@ -84,6 +84,28 @@ The results agreed, confirming that the raw register data was interpreted correc
 - [Library vs. Register Comparison Screenshot](./pictures/task6-library-register-comparison.png)
 - [SE95 Direct Register Reading Code](./ESP8266_SE95_Register_Test.ino)
 - [SE95 Library and Register Comparison Code](./ESP8266_SE95_Comparison.ino)
+
+ <a id="task-7"></a>
+## Task 7 — Two Devices on One Bus
+
+**Proves:** Communication with multiple I²C devices using shared SDA and SCL lines.
+
+In this task, we connected an LCD1602 display and an SE95 temperature sensor to the same I²C bus using an ESP8266 D1 mini. Both devices shared the same SDA (D2) and SCL (D1) pins.
+
+We scanned the bus and successfully detected both I²C addresses: `0x27` for the LCD1602 and `0x4F` for the SE95 sensor.
+
+We then developed a program to read the temperature from the SE95 sensor and display it on the LCD1602 in real time.
+
+**Result:**
+
+Both devices operated successfully on the same I²C bus without requiring additional GPIO pins. The measured temperature was approximately 25.25 °C.
+
+**Portfolio evidence:**
+
+- [Two Devices – I²C Scan](./pictures/task7-two-devices-scan.png)
+- [Temperature – Serial Monitor](./pictures/task7-temperature-serial.png)
+- [Temperature – LCD1602 Display](./pictures/task7-temperature-lcd.jpg)
+- [ESP8266 Two Devices Source Code](./ESP8266_I2C_Two_Devices.ino)
 
  <a id="task-9"></a>
 ## Task 9 — `Build and Test an ESP32 Logic Analyzer`
