@@ -51,9 +51,10 @@ applications, and possible problems.
 [SPI Bus Profile](./bus-spi.md)
 
 <a id="task-3"></a>
-## Task 3 — `<short title>`
+## Task 3 — `<Bus Systems Comparison>`
 
 **Proves:** [LG3](#lg3)
+**Portfolio evidence:** [Bus Systems Comparison](./bus-comparison.md)
 
  <a id="task-9"></a>
 ## Task 9 — Build and Test an ESP32 Logic Analyzer
