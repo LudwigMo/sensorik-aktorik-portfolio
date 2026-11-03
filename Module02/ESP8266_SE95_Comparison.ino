@@ -1,4 +1,3 @@
-
 #include <Wire.h>
 #include <M2M_LM75A.h>
 
