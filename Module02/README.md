@@ -29,13 +29,6 @@ We are going to show here notes for Task 1, 2, 3, 4, and 5 to prove
 
 **Evidence:** [Task 3](#task-3)
 
-<a id="task-1"></a>
-## Task 1 — `<short title>`
-
-**Proves:** [LG1](#lg1)
-
-This task was executed by myself.
-
 <a id="task-2"></a>
 ## Task 2 — Bus Systems Survey (SPI)
 
@@ -47,7 +40,7 @@ In this task, I researched the SPI(Serial Peripheral Interface) bus. I studied i
 [SPI Bus Profile](./bus-spi.md)
 
 <a id="task-3"></a>
-## Task 3 — `<Bus Systems Comparison>`
+## Task 3 — `Bus Systems Comparison`
 
 **Proves:** [LG3](#lg3)
 
@@ -55,16 +48,29 @@ In this task, I compared different communication bus systems, including SPI, I²
 
 **Portfolio evidence:** [Bus Systems Comparison](./bus-comparison.md)
 
+<a id="task-5"></a>
+
+## Task 5 — `I²C Bus Scan`
+
+**Proves:** I²C communication, device addressing and bus scanning.
+
+In this task, we connected an LCD1602 display with an I²C adapter to an ESP8266 D1 mini. Using the Wire library, we scanned the I²C bus and successfully detected one device at address 0x27. The result was displayed in both the Serial Monitor and on the LCD1602.
+
+**Portfolio evidence:**
+- [Serial Monitor Screenshot](./pictures/task5-i2c-scan-serial.png)
+- [LCD1602 Display Photo](./pictures/task5-i2c-scan-lcd.jpg)
+- [I²C Scanner Source Code](./ESP8266_I2C_Scanner.ino)
+
  <a id="task-9"></a>
-## Task 9 — Build and Test an ESP32 Logic Analyzer
+## Task 9 — `Build and Test an ESP32 Logic Analyzer`
 
 **Proves:** Practical application of digital signal acquisition and measurement.
 
-In this task, I built a digital logic analyzer using an ESP32 and the open-source ESP32_LogicAnalyzer project by lmcapacho.
+In this task, we built a digital logic analyzer using an ESP32 and the open-source ESP32_LogicAnalyzer project by lmcapacho.
 
-I installed the firmware using Arduino IDE and connected the ESP32 to PulseView via the SUMP protocol.
+We installed the firmware using Arduino IDE and connected the ESP32 to PulseView via the SUMP protocol.
 
-To test the logic analyzer, I used a second development board (ESP8266 D1 mini) to generate a square-wave signal of approximately 1 kHz.
+To test the logic analyzer, we used a second development board (ESP8266 D1 mini) to generate a square-wave signal of approximately 1 kHz.
 
 **Hardware connections:**
 - ESP8266 D5 (GPIO14) → ESP32 GPIO21 (CH0)
@@ -89,7 +95,7 @@ The logic analyzer successfully captured the square-wave signal. The measured fr
 
 #### I²C Protocol Decoding – Experimental Verification
 
-To verify I²C communication, I used an ESP8266 D1 mini to generate I²C signals and an ESP32 running the **lmcapacho Logic Analyzer** firmware to capture them. The signals were analyzed using PulseView.
+To verify I²C communication, we used an ESP8266 D1 mini to generate I²C signals and an ESP32 running the **lmcapacho Logic Analyzer** firmware to capture them. The signals were analyzed using PulseView.
 
 **Hardware setup:**
 
