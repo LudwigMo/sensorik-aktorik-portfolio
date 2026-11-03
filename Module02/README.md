@@ -87,6 +87,45 @@ The logic analyzer successfully captured the square-wave signal. The measured fr
 
 ![Task 9 – Square-wave measurement](./pictures/task9-square-wave-measurement.png)
 
+#### I²C Protocol Decoding – Experimental Verification
+
+To verify I²C communication, I used an ESP8266 D1 mini to generate I²C signals and an ESP32 running the **lmcapacho Logic Analyzer** firmware to capture them. The signals were analyzed using PulseView.
+
+**Hardware setup:**
+
+- ESP8266 D2 (SDA) → ESP32 GPIO21 (CH0)
+- ESP8266 D1 (SCL) → ESP32 GPIO19 (CH1)
+- Common GND between both boards
+- Two 4.7 kΩ pull-up resistors connected to 3.3 V
+- ESP32 GPIO22 → GPIO23 for the sampling-clock loopback
+
+**Test configuration:**
+
+- I²C clock frequency: 10 kHz
+- Logic analyzer sampling rate: 200 kHz
+- Capture size: 64 k samples
+- Target address: 0x29 (7-bit)
+
+**Result:**
+
+PulseView successfully captured and decoded the I²C communication.
+
+The decoded transaction was:
+
+`START → Address 0x29 → Write → NACK → STOP`
+
+The NACK response was expected because no I²C target device was connected at address 0x29.
+
+**Evidence:**
+
+![I²C protocol decoding in PulseView](./pictures/task9-i2c-decoding.png)
+
+**Source code:** [ESP8266 I²C Test](./ESP8266_I2C_Test.ino)
+
+**Conclusion:**
+
+The experiment demonstrated how I²C signals can be captured and decoded using a logic analyzer. The START and STOP conditions, the device address, the write operation, and the NACK response were successfully identified.
+
 ## Reflection 2
 
 [Reflection 2](../Reflections/ref02.md)
