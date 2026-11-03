@@ -61,6 +61,30 @@ In this task, we connected an LCD1602 display with an I²C adapter to an ESP8266
 - [LCD1602 Display Photo](./pictures/task5-i2c-scan-lcd.jpg)
 - [I²C Scanner Source Code](./ESP8266_I2C_Scanner.ino)
 
+<a id="task-6"></a>
+
+## Task 6 — Read Through the Library, Then Read the Register
+
+**Proves:** Reading sensor data using libraries and direct register access.
+
+In this task, we connected an SE95 temperature sensor to an ESP8266 D1 mini via I²C. We first read the temperature register (`0x00`) directly using the Wire library and converted the raw 13-bit value into degrees Celsius. We then used an LM75A-compatible library to read the same sensor and compared both results.
+
+**Result:**
+
+- I²C address: `0x4F`
+- Raw register value: `862`
+- Register temperature: `26.938 °C`
+- Library temperature: `26.938 °C`
+- Difference: `0.000 °C`
+
+The results agreed, confirming that the raw register data was interpreted correctly. For ESP8266 compatibility, we commented out the unsupported `Wire.end()` call in the LM75A library.
+
+**Portfolio evidence:**
+- [Register Reading Screenshot](./pictures/task6-register-reading.png)
+- [Library vs. Register Comparison Screenshot](./pictures/task6-library-register-comparison.png)
+- [SE95 Direct Register Reading Code](./ESP8266_SE95_Register_Test.ino)
+- [SE95 Library and Register Comparison Code](./ESP8266_SE95_Comparison.ino)
+
  <a id="task-9"></a>
 ## Task 9 — `Build and Test an ESP32 Logic Analyzer`
 
