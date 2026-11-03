@@ -70,7 +70,7 @@ We analyzed their wiring, signaling methods, topology, speed, and typical applic
 
 - [Bus Systems Comparison](./bus-comparison.md)
 
-## Task 5: I²C Bus Scan
+## Task 5: I2C Bus Scan
 
 **Proves:** [LG2](#lg2-i2c-principles), [LG3](#lg3-i2c-scanning)
 
