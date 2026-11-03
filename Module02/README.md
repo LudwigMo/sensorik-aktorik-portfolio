@@ -41,11 +41,7 @@ This task was executed by myself.
 
 **Proves:** [LG2](#lg2)
 
-In this task, I researched the SPI
-(Serial Peripheral Interface) bus.
-I studied its history, wiring,
-communication principles, advantages,
-applications, and possible problems.
+In this task, I researched the SPI(Serial Peripheral Interface) bus. I studied its history, wiring, communication principles, advantages, applications, and possible problems.
 
 **Portfolio evidence:**
 [SPI Bus Profile](./bus-spi.md)
@@ -54,6 +50,9 @@ applications, and possible problems.
 ## Task 3 — `<Bus Systems Comparison>`
 
 **Proves:** [LG3](#lg3)
+
+In this task, I compared different communication bus systems, including SPI, I²C/I³C, CAN, RS-232, RS-485, Modbus RTU, and OneWire. I analyzed their wiring, signaling methods, topology, speed, and typical applications. I also discussed their advantages and limitations to understand which bus is suitable for different situations.
+
 **Portfolio evidence:** [Bus Systems Comparison](./bus-comparison.md)
 
  <a id="task-9"></a>
