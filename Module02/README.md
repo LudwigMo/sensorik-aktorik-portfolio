@@ -52,7 +52,7 @@ Build and evaluate a low-cost logic analyzer to capture and analyze digital sign
 
 **Proves:** [LG1](#lg1-bus-comparison)
 
-In this task, we researched the SPI (Serial Peripheral Interface) bus. We studied its history, wiring, communication principles, advantages, applications, and possible problems.
+In this task, we researched the SPI (Serial Peripheral Interface) bus. We studied its history, wiring, communication principles, advantages, applications, and possible problems. We also used ChatGPT to explore technical questions and documented how we verified the information using external sources.
 
 **Portfolio evidence:**
 
