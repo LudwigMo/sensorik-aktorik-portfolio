@@ -1,4 +1,4 @@
-## Bus profile: SPI (Serial Peripheral Interface)
+# Task 2 – Bus profile: SPI (Serial Peripheral Interface)
 
 - **History and background:** SPI was developed by Motorola in the 1980s for communication between microcontrollers and peripheral devices.
 
