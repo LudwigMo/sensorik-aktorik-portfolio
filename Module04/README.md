@@ -250,3 +250,22 @@ For the waste-water tank, we prioritize reliable high-level detection to prevent
 For the bilge, we recommend staggered binary sensing to detect unwanted water early and provide an independent emergency alarm.
 
 Our laboratory experiments provide evidence for ultrasonic distance measurement, conductive water detection, and motion classification. The proposed fuel-compatible, capacitive, and float-switch solutions would require additional testing before installation on a real sailing yacht.
+
+### 7. Test Cards
+
+We summarized the sensing principles tested in our laboratory experiments, including their measurements, calibration methods, and limitations.
+
+| Principle | Liquid / Condition | What It Measures | Works? | Calibration / Validation | Failure / Limitation |
+|---|---|---|---|---|---|
+| HC-SR04 Ultrasonic | Tap water | Distance to the liquid surface (continuous) | Yes | Seven calibration points; 2.36% relative deviation in one independent volume validation | Foam, tilt, liquid movement, unwanted reflections, and short measurement distances |
+| HD-38 Conductive | Tap water | Electrical conductivity converted into binary wet/dry detection | Yes | Adjustable threshold; approximately 0.3 cm trigger immersion; 300 ms software debounce | Corrosion, contamination, water conductivity changes, and loose electrical connections |
+| BMI270 IMU | Simulated boat motion | Three-axis acceleration and motion intensity | Yes | Three motion conditions tested; experimental thresholds for automatic classification | Threshold sensitivity, slow tilting, and possible misclassification |
+
+#### Key Findings
+
+- We confirmed that ultrasonic sensing can measure liquid-level changes and estimate volume after calibration.
+- We demonstrated binary water detection using the HD-38 sensor and improved state stability with software debounce.
+- We used the BMI270 IMU to classify three simulated boat-motion conditions.
+- We identified sensor limitations that must be considered when selecting sensing principles for real tanks.
+
+These results were obtained under laboratory conditions. Further validation would be required for real marine applications.
