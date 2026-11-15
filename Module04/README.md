@@ -414,3 +414,40 @@ We identified several sources of uncertainty:
 - Motion-classification thresholds and sampling limitations
 
 We conclude that calibration, filtering, debounce, and independent failsafe sensors can improve measurement reliability. However, further testing would be required before applying these principles to real marine tanks.
+
+
+
+## Task 2 – Local Industrial Transfer
+
+**Proves:** [LG2](#lg2--sensor-selection), [LG5](#lg5--industrial-transfer)
+
+### Brewery in Bielefeld
+
+We consider a fictional brewery in Bielefeld that needs to monitor the liquid level in a fermentation tank.
+
+The operators need to monitor the filling level and prevent overflow. Foam formation during fermentation can interfere with level measurements, while incorrect readings may cause product loss or production interruptions.
+
+**Sensor Selection**
+
+We recommend an industrial radar level sensor for continuous measurement, combined with an independent high-level switch for overflow protection.
+
+In our HC-SR04 experiments, we observed that foam and liquid movement affected ultrasonic measurements. Therefore, we would evaluate an industrial radar sensor for its suitability under foaming conditions.
+
+Our HD-38 experiment demonstrated binary water detection. However, exposed metal probes are not ideal for hygienic brewery applications because of cleaning and contamination concerns.
+
+**Installation and Local Display**
+
+We would install the radar sensor at the top of the fermentation tank and place an independent high-level switch near the maximum permitted filling level.
+
+The local display would show:
+
+- Current liquid level
+- Estimated liquid volume
+- Normal or warning status
+- HIGH LEVEL ALARM when the limit is reached
+
+**Verification and Limitations**
+
+We would calibrate the system using known filling volumes and test its response to foam, changing liquid levels, and cleaning conditions.
+
+Our laboratory tests demonstrated ultrasonic and binary sensing principles. The proposed radar-based system remains a theoretical design that requires further validation under real brewery conditions.
