@@ -6,14 +6,12 @@ We use an HC-SR04 ultrasonic sensor, an HD-38 water sensor, and a BMI270 IMU to 
 
 ## Learning Goals
 
-> **How to use the learning goals.** Copy the module's learning goals from the course workbook into the block below. Keep the `LG1`, `LG2`, … IDs and a one-word keyword. In each task, write `Proves: LG2` (or link to `[LG2](#lg2)`) so you can find the evidence quickly at checkpoint time. In the **Evidence** line under each goal, link to the task that proves it.
-
 <a id="lg1"></a>
-### LG1 — `<keyword>`
-
+### LG1 — Sensing Principles
+Explain the differences between binary, thresholded, continuous, and hybrid liquid-level sensing.
 <copy the goal here>
 
-**Evidence:** [Task Inspirations](#task-inspirations)
+**Evidence**: 
 
 <a id="lg2"></a>
 ### LG2 — `<keyword>`
