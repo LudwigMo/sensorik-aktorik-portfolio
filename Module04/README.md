@@ -225,7 +225,7 @@ We used an HD-38 module with a two-prong conductive sensor to detect the presenc
 
 **Binary Sensor Setup**
 
-![HD-38 Sensor Setup](pictures/binary_sensor_setup.jpg)
+[HD-38 Sensor Setup](pictures/binary_sensor_setup.jpg)
 
 We connected the HD-38 conductive sensor to the ESP32 to test binary wet/dry detection.
 
