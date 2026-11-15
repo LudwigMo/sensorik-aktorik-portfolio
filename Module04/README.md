@@ -510,6 +510,12 @@ The local display would show:
 - Normal or warning status
 - HIGH LEVEL ALARM when the limit is reached
 
+**Installation Sketch**
+
+[Brewery Installation Sketch](pictures/brewery_installation.png)
+
+We propose a radar level sensor mounted at the top of the fermentation tank and an independent high-level switch for overflow protection. A local display would show the measured liquid level, estimated volume, and alarm status.
+
 **Verification and Limitations**
 
 We would calibrate the system using known filling volumes and test its response to foam, changing liquid levels, and cleaning conditions.
