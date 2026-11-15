@@ -72,3 +72,45 @@ We used the following connections:
 | ECHO | GPIO19 via a voltage divider |
 
 We used two 5 kΩ resistors to reduce the ECHO signal voltage before connecting it to the ESP32.
+
+### 2. Volume Calibration and Validation
+
+We calibrated the HC-SR04 sensor using a transparent container, a measuring cup, and a digital scale. We gradually added water and recorded the corresponding ultrasonic distance measurements.
+
+We used the mass of water to estimate its volume, assuming approximately 1 g = 1 mL.
+
+**Calibration Results**
+
+| Water Volume (mL) | Distance (cm) | Estimated Level (cm) |
+|---|---|---|
+| 0 | 12.1 | 0.0 |
+| 42 | 11.5 | 0.6 |
+| 103 | 9.6 | 2.5 |
+| 156 | 8.9 | 3.2 |
+| 205 | 7.0 | 5.1 |
+| 258 | 6.4 | 5.7 |
+| 309 | 4.9 | 7.2 |
+
+We calculated the estimated water level using:
+
+\[
+h = d_0 - d
+\]
+
+where \(d_0 = 12.1\) cm is the empty-container distance and \(d\) is the measured distance.
+
+**Validation**
+
+We used piecewise linear interpolation to estimate the water volume from the measured distance.
+
+In an independent validation test, we recorded:
+
+- Reference volume: approximately 219 mL
+- Measured distance: 6.9 cm
+- Estimated volume: 213.83 mL
+- Absolute deviation: 5.17 mL
+- Relative deviation: 2.36%
+
+The measured distance decreased as the water volume increased. The validation result suggests that the calibration method can estimate liquid volume within the tested range.
+
+However, we observed non-uniform changes between calibration points. Therefore, this single validation result does not establish the sensor's accuracy across the entire range.
