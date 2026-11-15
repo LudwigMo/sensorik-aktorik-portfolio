@@ -11,35 +11,35 @@ We use an HC-SR04 ultrasonic sensor, an HD-38 water sensor, and a BMI270 IMU to 
 Explain the differences between binary, thresholded, continuous, and hybrid liquid-level sensing.
 <copy the goal here>
 
-**Evidence**: 
+**Evidence**: [Task 1](#task-1-liquid-measurement-and-sensor-selection)
 
 <a id="lg2"></a>
 ### LG2 —  Sensor Selection
 Select suitable sensors for different tanks and liquids, considering foam, conductivity, density, hygiene, safety, and operating conditions.
 <copy the goal here>
 
-**Evidence:** [Task Personal Profile](#task-personal-profile)
+**Evidence:** [Task 1](#task-1-liquid-measurement-and-sensor-selection)
 
 <a id="lg3"></a>
 ### LG3 — Calibration
 Build and calibrate continuous and binary measurement systems, convert distance into liquid level and volume, and evaluate uncertainty.
 <copy the goal here>
 
-**Evidence:** [Task What is IoT](#task-what-is-iot)
+**Evidence:** [Task 1](#task-1-liquid-measurement-and-sensor-selection)
 
 <a id="lg4"></a>
 ### LG4 — Motion Detection
 Use an IMU to distinguish between stationary, moving, and rough-motion conditions and explain their effects on liquid-level measurements.
 <copy the goal here>
 
-**Evidence:** [Task What is IoT](#task-what-is-iot)
+**Evidence:** [Task 1](#task-1-liquid-measurement-and-sensor-selection)
 
 <a id="lg5"></a>
 ### LG5 — Industrial Transfer
 Recommend suitable sensing solutions and apply the results to another industrial liquid-measurement scenario.
 <copy the goal here>
 
-**Evidence:** [Task What is IoT](#task-what-is-iot)
+**Evidence:** [Task 2](#task-2-local-industrial-transfer)
 
 <a id="task-inspirations"></a>
 ## Task Inspirations
