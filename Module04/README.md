@@ -185,3 +185,47 @@ The HD-38 detects electrical conductivity between its metal probes rather than m
 We initially encountered a loose power connection, which caused invalid readings. After restoring the 3.3 V supply and adjusting the potentiometer, the sensor successfully distinguished between dry and wet conditions.
 
 The switching threshold may change with water conductivity, probe contamination, and corrosion. Therefore, the HD-38 is suitable for our laboratory demonstration but would require additional validation before use in a real marine environment.
+
+### 5. IMU Motion Detection and Sea-State Classification
+
+We used the BMI270 IMU integrated into the M5StickS3 to simulate three boat-motion conditions: In Harbor, Moving, and Rough.
+
+We measured acceleration along the X, Y, and Z axes and calculated the acceleration magnitude:
+
+\[
+a = \sqrt{a_x^2 + a_y^2 + a_z^2}
+\]
+
+We then calculated the absolute deviation from 1 g and used the mean deviation within a short measurement window to classify the motion state.
+
+**Experimental Results**
+
+| Motion Condition | Mean Deviation | Observation |
+|---|---|---|
+| In Harbor | Approximately 0.002 g | Stable acceleration |
+| Moving | Approximately 0.027–0.066 g | Moderate fluctuations |
+| Rough | Approximately 0.598–1.389 g | Large fluctuations and acceleration peaks |
+
+**Automatic Sea-State Classification**
+
+We developed a classification program using the following experimental thresholds:
+
+| Mean Acceleration Deviation | Classification |
+|---|---|
+| Below 0.025 g | IN HARBOR |
+| 0.025 g to below 0.25 g | MOVING |
+| 0.25 g or higher | ROUGH |
+
+We successfully identified stationary and rough-motion conditions. During the gentle-motion test, the system mainly reported MOVING, although one measurement window was classified as IN HARBOR because its mean deviation was approximately 0.024 g.
+
+**Relevance to Liquid-Level Measurement**
+
+Our earlier ultrasonic experiments showed that liquid movement and container tilt can affect distance measurements.
+
+We can use IMU data to identify motion conditions in which liquid-level readings may become less reliable. However, we did not perform synchronized ultrasonic and IMU measurements, so this remains a proposed improvement.
+
+**Limitations**
+
+The thresholds were selected for our laboratory demonstration and were not calibrated against real sea conditions.
+
+Slow tilting may change individual acceleration components while the total acceleration magnitude remains close to 1 g. Therefore, additional gyroscope data and further testing would be necessary for more reliable motion detection.
