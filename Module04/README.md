@@ -40,45 +40,35 @@ Recommend suitable sensing solutions and apply the results to another industrial
 <copy the goal here>
 
 **Evidence:** [Task 2](#task-2-local-industrial-transfer)
+## Task 1 – Liquid Measurement and Sensor Selection
 
-<a id="task-inspirations"></a>
-## Task Inspirations
+**Proves:** [LG1](#lg1--sensing-principles), [LG2](#lg2--sensor-selection), [LG3](#lg3--calibration), [LG4](#lg4--motion-detection)
 
-**Proves:** [LG1](#lg1)
+In this task, we investigate continuous and binary liquid-level sensing using an ESP32, an HC-SR04 ultrasonic sensor, and an HD-38 water sensor.
 
-- Inspiration 1
-- Inspiration 2
+We also use the BMI270 IMU in the M5StickS3 to simulate different boat-motion conditions and evaluate their influence on measurement reliability.
 
-<a id="task-personal-profile"></a>
-## Task Personal Profile
+Our experiments include:
 
-**Proves:** [LG2](#lg2)
+- Ultrasonic distance measurement and volume calibration
+- Foam and tilt interference tests
+- Binary water detection and software debounce
+- IMU motion detection and sea-state classification
+- Sensor selection for four tanks on the Nordwind sailing yacht
 
-<a id="task-what-is-iot"></a>
-## Task What is IoT
+### 1. Ultrasonic Liquid-Level Measurement
 
-**Proves:** [LG3](#lg3)
+We mounted the HC-SR04 ultrasonic sensor above a transparent container and connected it to the ESP32.
 
-Domains and included areas:
+The sensor measures the distance to the water surface using ultrasonic time-of-flight. As the water level increases, the measured distance decreases.
 
--
--
+We used the following connections:
 
-Commonly used (data) protocols:
+| HC-SR04 | ESP32 |
+|---|---|
+| VCC | VIN (5 V with USB supply) |
+| GND | GND |
+| TRIG | GPIO18 |
+| ECHO | GPIO19 via a voltage divider |
 
--
--
-
-Typical devices (appliance or micro controller):
-
--
--
-
-Challenges:
-
--
--
-
-## Reflection 1
-
-[Reflection 1](../Reflections/ref01.md)
+We used two 5 kΩ resistors to reduce the ECHO signal voltage before connecting it to the ESP32.
