@@ -114,3 +114,32 @@ In an independent validation test, we recorded:
 The measured distance decreased as the water volume increased. The validation result suggests that the calibration method can estimate liquid volume within the tested range.
 
 However, we observed non-uniform changes between calibration points. Therefore, this single validation result does not establish the sensor's accuracy across the entire range.
+
+### 3. Foam and Tilt Interference Tests
+
+We investigated how foam, liquid movement, and container tilt affect ultrasonic distance measurements.
+
+We fixed the HC-SR04 above a container with foamy water and compared the raw and filtered measurements under different conditions.
+
+**Experimental Results**
+
+| Test Condition | Measured Distance | Observation |
+|---|---|---|
+| Stable foamy water | Approximately 4.33 cm | Stable readings with small fluctuations |
+| Tilted container | Approximately 5.61 cm | Several short measurement spikes |
+| Maximum raw reading during tilt | Approximately 6.47 cm | Temporary peak in the raw signal |
+| Returned to horizontal position | Approximately 4.33 cm | Stable readings after settling |
+
+**Filtering**
+
+We compared the raw ultrasonic measurements with the filtered values using the Arduino Serial Plotter.
+
+During the tilted-container test, we observed several short spikes in the raw signal. The filtered output showed smaller fluctuations and remained more stable.
+
+**Limitations**
+
+Foam can change the effective reflecting surface, while container tilt and liquid movement can change the distance and angle between the sensor and the liquid surface.
+
+We observed these effects during our experiments, but we could not isolate the influence of each factor because foam distribution and liquid position changed during the tests.
+
+Therefore, we recommend stable sensor mounting, appropriate filtering, and additional validation for moving tanks.
