@@ -56,6 +56,7 @@ Our experiments include:
 - IMU motion detection and sea-state classification
 - Sensor selection for four tanks on the Nordwind sailing yacht
 
+
 ### 1. Ultrasonic Liquid-Level Measurement
 
 We mounted the HC-SR04 ultrasonic sensor above a transparent container and connected it to the ESP32.
@@ -72,6 +73,7 @@ We used the following connections:
 | ECHO | GPIO19 via a voltage divider |
 
 We used two 5 kΩ resistors to reduce the ECHO signal voltage before connecting it to the ESP32.
+
 
 ### 2. Volume Calibration and Validation
 
@@ -93,27 +95,61 @@ We used the mass of water to estimate its volume, assuming approximately 1 g = 1
 
 We calculated the estimated water level using:
 
-\[
+$$
 h = d_0 - d
-\]
+$$
 
-where \(d_0 = 12.1\) cm is the empty-container distance and \(d\) is the measured distance.
+where:
+- $h$ is the estimated water level.
+- $d_0 = 12.1\,\text{cm}$ is the empty-container distance.
+- $d$ is the measured distance.
+
+**Volume Estimation**
+
+We used piecewise linear interpolation between neighboring calibration points to estimate the water volume:
+
+$$
+V = V_1 + \frac{d_1-d}{d_1-d_2}(V_2-V_1)
+$$
+
+where:
+- $V$ is the estimated volume.
+- $d$ is the measured distance.
+- $d_1$ and $d_2$ are the neighboring calibration distances.
+- $V_1$ and $V_2$ are their corresponding volumes.
 
 **Validation**
 
-We used piecewise linear interpolation to estimate the water volume from the measured distance.
+In an independent validation test, we measured a distance of 6.9 cm.
 
-In an independent validation test, we recorded:
+Using the neighboring calibration points, we calculated:
 
-- Reference volume: approximately 219 mL
-- Measured distance: 6.9 cm
-- Estimated volume: 213.83 mL
-- Absolute deviation: 5.17 mL
-- Relative deviation: 2.36%
+$$
+V = 205 + \frac{7.0-6.9}{7.0-6.4}(258-205)
+$$
 
-The measured distance decreased as the water volume increased. The validation result suggests that the calibration method can estimate liquid volume within the tested range.
+$$
+V \approx 213.83\,\text{mL}
+$$
 
-However, we observed non-uniform changes between calibration points. Therefore, this single validation result does not establish the sensor's accuracy across the entire range.
+We compared this estimate with the reference volume of approximately 219 mL.
+
+The relative deviation was calculated as:
+
+$$
+\text{Relative Deviation} =
+\frac{|219-213.83|}{219}\times100\%
+\approx 2.36\%
+$$
+
+**Results and Limitations**
+
+The measured distance decreased as the water volume increased. Our calibration and validation demonstrated that piecewise linear interpolation can be used to estimate water volume within the tested range.
+
+However, we observed non-uniform changes between calibration points. Possible causes include unwanted ultrasonic reflections, sensor alignment, container geometry, and measurement uncertainty.
+
+The 2.36% relative deviation represents one independent validation test and does not establish the sensor's accuracy across the entire measurement range.
+
 
 ### 3. Foam and Tilt Interference Tests
 
@@ -143,6 +179,7 @@ Foam can change the effective reflecting surface, while container tilt and liqui
 We observed these effects during our experiments, but we could not isolate the influence of each factor because foam distribution and liquid position changed during the tests.
 
 Therefore, we recommend stable sensor mounting, appropriate filtering, and additional validation for moving tanks.
+
 
 ### 4. Binary Water Detection
 
@@ -186,17 +223,30 @@ We initially encountered a loose power connection, which caused invalid readings
 
 The switching threshold may change with water conductivity, probe contamination, and corrosion. Therefore, the HD-38 is suitable for our laboratory demonstration but would require additional validation before use in a real marine environment.
 
+
 ### 5. IMU Motion Detection and Sea-State Classification
 
 We used the BMI270 IMU integrated into the M5StickS3 to simulate three boat-motion conditions: In Harbor, Moving, and Rough.
 
 We measured acceleration along the X, Y, and Z axes and calculated the acceleration magnitude:
 
-\[
+$$
 a = \sqrt{a_x^2 + a_y^2 + a_z^2}
-\]
+$$
 
-We then calculated the absolute deviation from 1 g and used the mean deviation within a short measurement window to classify the motion state.
+where:
+- $a_x$ is the acceleration along the X-axis.
+- $a_y$ is the acceleration along the Y-axis.
+- $a_z$ is the acceleration along the Z-axis.
+- $a$ is the total acceleration magnitude.
+
+We then calculated the absolute deviation from 1 g:
+
+$$
+D = |a - 1g|
+$$
+
+We used the mean deviation within a short measurement window to classify the motion state.
 
 **Experimental Results**
 
@@ -230,6 +280,7 @@ The thresholds were selected for our laboratory demonstration and were not calib
 
 Slow tilting may change individual acceleration components while the total acceleration magnitude remains close to 1 g. Therefore, additional gyroscope data and further testing would be necessary for more reliable motion detection.
 
+
 ### 6. Decision Sheet — Sensor Selection for Four Tanks
 
 We evaluated suitable sensing principles for the four tanks on the Nordwind sailing yacht. We considered the liquid properties, required measurements, possible failures, and installation conditions.
@@ -251,6 +302,7 @@ For the bilge, we recommend staggered binary sensing to detect unwanted water ea
 
 Our laboratory experiments provide evidence for ultrasonic distance measurement, conductive water detection, and motion classification. The proposed fuel-compatible, capacitive, and float-switch solutions would require additional testing before installation on a real sailing yacht.
 
+
 ### 7. Test Cards
 
 We summarized the sensing principles tested in our laboratory experiments, including their measurements, calibration methods, and limitations.
@@ -269,6 +321,7 @@ We summarized the sensing principles tested in our laboratory experiments, inclu
 - We identified sensor limitations that must be considered when selecting sensing principles for real tanks.
 
 These results were obtained under laboratory conditions. Further validation would be required for real marine applications.
+
 
 ### 8. Recommendation Report
 
@@ -294,6 +347,7 @@ We recommend two binary water detectors installed at different heights. The lowe
 
 We conclude that no single sensing principle is suitable for every tank. Continuous sensing is useful when remaining volume matters, while binary or threshold-based sensing is more appropriate for overflow prevention and water-presence detection. Independent failsafe sensors improve the robustness of critical alarms.
 
+
 ### 9. Theory Report
 
 #### Ultrasonic Measurement
@@ -302,19 +356,22 @@ We used the HC-SR04 sensor to measure the distance between the sensor and the wa
 
 We calculated the distance using:
 
-\[
+$$
 d = \frac{v \cdot t}{2}
-\]
+$$
 
-where \(v\) is the speed of sound and \(t\) is the measured round-trip time.
+where:
+- \(d\) is the measured distance.
+- \(v\) is the speed of sound.
+- \(t\) is the round-trip time.
 
 We estimated the liquid level using:
 
-\[
+$$
 h = d_0 - d
-\]
+$$
 
-where \(d_0\) is the empty-container distance.
+where \(d_0\) is the empty-container distance and \(d\) is the measured distance.
 
 #### Calibration and Validation
 
