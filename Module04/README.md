@@ -1,12 +1,8 @@
-# Module 1
+# Module 4 – Liquid Measurement & Sensor Selection
 
-> **Example module** from the IoT introduction class. Adjust the headings and tasks to match your actual course content.
+In this module, we explore liquid-level measurement using ultrasonic and conductive sensing principles. We also investigate how liquid movement, foam, and sensor calibration affect measurement reliability.
 
-> When you start editing this file, remove this description.
->
-> Usually the first things you have to document are some inspirations hinting at what
-> you might be able to build in this class, a personal profile description regarding
-> programming expertise, previous MCU knowledge, creative qualities, and expectations
+We use an HC-SR04 ultrasonic sensor, an HD-38 water sensor, and a BMI270 IMU to perform experiments and evaluate suitable sensing solutions for four tanks on a sailing yacht.
 
 Module description
 
