@@ -269,3 +269,27 @@ We summarized the sensing principles tested in our laboratory experiments, inclu
 - We identified sensor limitations that must be considered when selecting sensing principles for real tanks.
 
 These results were obtained under laboratory conditions. Further validation would be required for real marine applications.
+
+### 8. Recommendation Report
+
+Based on our laboratory experiments and sensor selection analysis, we recommend different sensing solutions for the four tanks on the Nordwind sailing yacht.
+
+**Diesel Tank**
+
+We recommend a diesel-compatible continuous level sensor combined with an independent low-level float switch. The continuous sensor provides information about the remaining fuel, while the switch provides a critical low-fuel warning. Our motion experiments showed why liquid movement must be considered. For real installation, we would verify fuel compatibility and marine safety requirements.
+
+**Fresh Water Tank**
+
+We recommend an ultrasonic level sensor with an independent low-level float switch. Our HC-SR04 experiments demonstrated continuous distance measurement and volume estimation using seven calibration points. However, foam and liquid movement affected the readings, so we recommend filtering, stable mounting, and calibration for the actual tank geometry.
+
+**Waste Water Tank**
+
+We recommend a non-contact capacitive level switch for high-level detection, supported by an independent high-level float switch. This reduces direct contact between the primary sensor and contaminated liquid. We would verify the effect of tank-wall thickness, deposits, and contamination before installation.
+
+**Bilge**
+
+We recommend two binary water detectors installed at different heights. The lower detector provides early warning, while the higher independent switch triggers an emergency alarm. Our HD-38 experiment demonstrated basic wet/dry detection, but a real installation would require marine-rated sensors resistant to corrosion and contamination.
+
+**Overall Recommendation**
+
+We conclude that no single sensing principle is suitable for every tank. Continuous sensing is useful when remaining volume matters, while binary or threshold-based sensing is more appropriate for overflow prevention and water-presence detection. Independent failsafe sensors improve the robustness of critical alarms.
