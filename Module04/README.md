@@ -243,7 +243,7 @@ DRY
 
 **Binary Sensor Output**
 
-![HD-38 Binary Detection](pictures/binary_sensor_output.png)
+[HD-38 Binary Detection](pictures/binary_sensor_output.png)
 
 We confirmed the dry-to-wet and wet-to-dry transitions using a 300 ms software debounce.
 
@@ -308,15 +308,15 @@ We can use IMU data to identify motion conditions in which liquid-level readings
 
 **IMU Motion Classification**
 
-![In Harbor](pictures/imu_harbor.png)
+[In Harbor](pictures/imu_harbor.png)
 
 We observed stable acceleration readings under stationary conditions.
 
-![Moving](pictures/imu_moving.png)
+[Moving](pictures/imu_moving.png)
 
 We mainly detected MOVING during gentle motion, with one classification as IN HARBOR near the selected threshold.
 
-![Rough](pictures/imu_rough.png)
+[Rough](pictures/imu_rough.png)
 
 We successfully classified the simulated rough-motion condition using the BMI270 IMU.
 
