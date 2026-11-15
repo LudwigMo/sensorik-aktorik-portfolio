@@ -166,6 +166,36 @@ We fixed the HC-SR04 above a container with foamy water and compared the raw and
 | Maximum raw reading during tilt | Approximately 6.47 cm | Temporary peak in the raw signal |
 | Returned to horizontal position | Approximately 4.33 cm | Stable readings after settling |
 
+We observed these effects during our experiments, but we could not isolate the influence of each factor because foam distribution and liquid position changed during the tests.
+
+Therefore, we recommend stable sensor mounting, appropriate filtering, and additional validation for moving tanks.
+
+**Experimental Evidence**
+
+**Raw and Filtered Measurements**
+
+![Foam and Tilt Test](pictures/foam_tilt_test.png)
+
+We observed large spikes in the raw ultrasonic signal, while the filtered signal showed smoother changes.
+
+**Stable Measurement**
+
+![Stable Ultrasonic Measurement](pictures/ultrasonic_stable.png)
+
+We observed only small differences between raw and filtered measurements under stable conditions.
+
+**Tilt Interference**
+
+![Tilt Interference](pictures/foam_tilt_spikes.png)
+
+We observed several short peaks in the raw measurements when the container was tilted.
+
+**Stable State After Tilt**
+
+![Stable State After Tilt](pictures/foam_stable_after_tilt.png)
+
+After the liquid settled, the raw and filtered readings became stable again.
+
 **Filtering**
 
 We compared the raw ultrasonic measurements with the filtered values using the Arduino Serial Plotter.
@@ -175,10 +205,6 @@ During the tilted-container test, we observed several short spikes in the raw si
 **Limitations**
 
 Foam can change the effective reflecting surface, while container tilt and liquid movement can change the distance and angle between the sensor and the liquid surface.
-
-We observed these effects during our experiments, but we could not isolate the influence of each factor because foam distribution and liquid position changed during the tests.
-
-Therefore, we recommend stable sensor mounting, appropriate filtering, and additional validation for moving tanks.
 
 
 ### 4. Binary Water Detection
