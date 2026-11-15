@@ -14,15 +14,29 @@ Explain the differences between binary, thresholded, continuous, and hybrid liqu
 **Evidence**: 
 
 <a id="lg2"></a>
-### LG2 — `<keyword>`
-
+### LG2 —  Sensor Selection
+Select suitable sensors for different tanks and liquids, considering foam, conductivity, density, hygiene, safety, and operating conditions.
 <copy the goal here>
 
 **Evidence:** [Task Personal Profile](#task-personal-profile)
 
 <a id="lg3"></a>
-### LG3 — `<keyword>`
+### LG3 — Calibration
+Build and calibrate continuous and binary measurement systems, convert distance into liquid level and volume, and evaluate uncertainty.
+<copy the goal here>
 
+**Evidence:** [Task What is IoT](#task-what-is-iot)
+
+<a id="lg4"></a>
+### LG4 — Motion Detection
+Use an IMU to distinguish between stationary, moving, and rough-motion conditions and explain their effects on liquid-level measurements.
+<copy the goal here>
+
+**Evidence:** [Task What is IoT](#task-what-is-iot)
+
+<a id="lg5"></a>
+### LG5 — Industrial Transfer
+Recommend suitable sensing solutions and apply the results to another industrial liquid-measurement scenario.
 <copy the goal here>
 
 **Evidence:** [Task What is IoT](#task-what-is-iot)
