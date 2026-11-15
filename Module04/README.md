@@ -174,25 +174,25 @@ Therefore, we recommend stable sensor mounting, appropriate filtering, and addit
 
 **Raw and Filtered Measurements**
 
-![Foam and Tilt Test](pictures/foam_tilt_test.png)
+[Foam and Tilt Test](pictures/foam_tilt_test.png)
 
 We observed large spikes in the raw ultrasonic signal, while the filtered signal showed smoother changes.
 
 **Stable Measurement**
 
-![Stable Ultrasonic Measurement](pictures/ultrasonic_stable.png)
+[Stable Ultrasonic Measurement](pictures/ultrasonic_stable.png)
 
 We observed only small differences between raw and filtered measurements under stable conditions.
 
 **Tilt Interference**
 
-![Tilt Interference](pictures/foam_tilt_spikes.png)
+[Tilt Interference](pictures/foam_tilt_spikes.png)
 
 We observed several short peaks in the raw measurements when the container was tilted.
 
 **Stable State After Tilt**
 
-![Stable State After Tilt](pictures/foam_stable_after_tilt.png)
+[Stable State After Tilt](pictures/foam_stable_after_tilt.png)
 
 After the liquid settled, the raw and filtered readings became stable again.
 
