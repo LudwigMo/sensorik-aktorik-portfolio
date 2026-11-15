@@ -229,3 +229,24 @@ We can use IMU data to identify motion conditions in which liquid-level readings
 The thresholds were selected for our laboratory demonstration and were not calibrated against real sea conditions.
 
 Slow tilting may change individual acceleration components while the total acceleration magnitude remains close to 1 g. Therefore, additional gyroscope data and further testing would be necessary for more reliable motion detection.
+
+### 6. Decision Sheet — Sensor Selection for Four Tanks
+
+We evaluated suitable sensing principles for the four tanks on the Nordwind sailing yacht. We considered the liquid properties, required measurements, possible failures, and installation conditions.
+
+| Tank | Decision | Mode | Principle (Primary / Failsafe) | Evidence | Failure + Installation Note |
+|---|---|---|---|---|---|
+| Diesel | Remaining fuel level and low-level warning | Hybrid: continuous + binary | Diesel-compatible continuous level sender / independent low-level float switch | Our ultrasonic and IMU experiments demonstrated the influence of motion on distance measurements. | Sloshing can cause unstable readings. We recommend fuel-compatible sensors, stable mounting, and filtering. |
+| Fresh Water | Remaining water volume and low-level warning | Hybrid: continuous + binary | Ultrasonic level sensor / low-level float switch | Our volume calibration used seven reference points. One validation test showed a relative deviation of 2.36%. | Foam, movement, and unwanted reflections may affect readings. We recommend filtering and suitable mounting. |
+| Waste Water | High-level alarm to prevent overflow | Threshold + high failsafe | Non-contact capacitive level switch / independent high-level float switch | Our HD-38 experiment demonstrated binary wet/dry detection and 300 ms software debounce. | Contamination and deposits may cause incorrect detection. We recommend verifying tank-wall compatibility and sensor reliability. |
+| Bilge | Detect unwanted water accumulation | Staggered binary | Low-level water detector / independent high-level float switch | Our HD-38 sensor detected water contact at approximately 0.3 cm immersion depth. | Corrosion, salt deposits, and contamination may cause false readings. We recommend marine-rated sensors and independent alarm levels. |
+
+#### Recommendation Summary
+
+We recommend continuous measurement with an independent low-level alarm for the diesel and fresh-water tanks because the crew needs information about the remaining liquid volume.
+
+For the waste-water tank, we prioritize reliable high-level detection to prevent overflow.
+
+For the bilge, we recommend staggered binary sensing to detect unwanted water early and provide an independent emergency alarm.
+
+Our laboratory experiments provide evidence for ultrasonic distance measurement, conductive water detection, and motion classification. The proposed fuel-compatible, capacitive, and float-switch solutions would require additional testing before installation on a real sailing yacht.
