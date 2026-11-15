@@ -143,3 +143,45 @@ Foam can change the effective reflecting surface, while container tilt and liqui
 We observed these effects during our experiments, but we could not isolate the influence of each factor because foam distribution and liquid position changed during the tests.
 
 Therefore, we recommend stable sensor mounting, appropriate filtering, and additional validation for moving tanks.
+
+### 4. Binary Water Detection
+
+We used an HD-38 module with a two-prong conductive sensor to detect the presence of water.
+
+We connected the sensor to the ESP32 using the following pins:
+
+| HD-38 | ESP32 |
+|---|---|
+| VCC (+) | 3V3 |
+| GND (-) | GND |
+| DO | GPIO27 |
+| AO | Not connected |
+
+**Experimental Results**
+
+| Test Condition | Digital Output | Observation |
+|---|---|---|
+| Dry probe | 1 | No water detected |
+| Probe immersed in water | 0 | Water detected |
+| Probe removed and dried | 1 | Returned to dry state |
+
+We adjusted the potentiometer on the HD-38 module to set the detection threshold. Under our test conditions, the digital output changed when the probe was immersed approximately 0.3 cm into the water.
+
+**Software Debounce**
+
+We implemented a 300 ms software debounce to prevent short signal changes from immediately triggering a new state.
+
+The Serial Monitor displayed the expected transitions:
+
+```text
+WATER DETECTED
+DRY
+```
+
+**Limitations**
+
+The HD-38 detects electrical conductivity between its metal probes rather than measuring the exact liquid level.
+
+We initially encountered a loose power connection, which caused invalid readings. After restoring the 3.3 V supply and adjusting the potentiometer, the sensor successfully distinguished between dry and wet conditions.
+
+The switching threshold may change with water conductivity, probe contamination, and corrosion. Therefore, the HD-38 is suitable for our laboratory demonstration but would require additional validation before use in a real marine environment.
