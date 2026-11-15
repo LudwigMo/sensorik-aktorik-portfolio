@@ -241,6 +241,12 @@ WATER DETECTED
 DRY
 ```
 
+**Binary Sensor Output**
+
+![HD-38 Binary Detection](pictures/binary_sensor_output.png)
+
+We confirmed the dry-to-wet and wet-to-dry transitions using a 300 ms software debounce.
+
 **Limitations**
 
 The HD-38 detects electrical conductivity between its metal probes rather than measuring the exact liquid level.
@@ -299,6 +305,20 @@ We successfully identified stationary and rough-motion conditions. During the ge
 Our earlier ultrasonic experiments showed that liquid movement and container tilt can affect distance measurements.
 
 We can use IMU data to identify motion conditions in which liquid-level readings may become less reliable. However, we did not perform synchronized ultrasonic and IMU measurements, so this remains a proposed improvement.
+
+**IMU Motion Classification**
+
+![In Harbor](pictures/imu_harbor.png)
+
+We observed stable acceleration readings under stationary conditions.
+
+![Moving](pictures/imu_moving.png)
+
+We mainly detected MOVING during gentle motion, with one classification as IN HARBOR near the selected threshold.
+
+![Rough](pictures/imu_rough.png)
+
+We successfully classified the simulated rough-motion condition using the BMI270 IMU.
 
 **Limitations**
 
