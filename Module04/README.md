@@ -81,6 +81,12 @@ We calibrated the HC-SR04 sensor using a transparent container, a measuring cup,
 
 We used the mass of water to estimate its volume, assuming approximately 1 g = 1 mL.
 
+**Volume Calibration Setup**
+
+[Volume Calibration Setup](pictures/ultrasonic_calibration_setup.jpg)
+
+We used a digital scale and a measuring cup to calibrate the ultrasonic distance measurements against known water volumes.
+
 **Calibration Results**
 
 | Water Volume (mL) | Distance (cm) | Estimated Level (cm) |
@@ -157,6 +163,12 @@ We investigated how foam, liquid movement, and container tilt affect ultrasonic 
 
 We fixed the HC-SR04 above a container with foamy water and compared the raw and filtered measurements under different conditions.
 
+**Foam and Tilt Test Setup**
+
+[Foam and Tilt Setup](pictures/foam_tilt_setup.jpg)
+
+We tilted the container with foamy water to investigate the effects of liquid movement and surface reflections.
+
 **Experimental Results**
 
 | Test Condition | Measured Distance | Observation |
@@ -210,6 +222,12 @@ Foam can change the effective reflecting surface, while container tilt and liqui
 ### 4. Binary Water Detection
 
 We used an HD-38 module with a two-prong conductive sensor to detect the presence of water.
+
+**Binary Sensor Setup**
+
+![HD-38 Sensor Setup](pictures/binary_sensor_setup.jpg)
+
+We connected the HD-38 conductive sensor to the ESP32 to test binary wet/dry detection.
 
 We connected the sensor to the ESP32 using the following pins:
 
