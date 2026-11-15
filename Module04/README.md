@@ -451,3 +451,13 @@ The local display would show:
 We would calibrate the system using known filling volumes and test its response to foam, changing liquid levels, and cleaning conditions.
 
 Our laboratory tests demonstrated ultrasonic and binary sensing principles. The proposed radar-based system remains a theoretical design that requires further validation under real brewery conditions.
+
+
+### 10. Code and Experimental Evidence
+
+**Arduino Code**
+
+- [HC-SR04 Ultrasonic Measurement](code/ultrasonic_raw.ino)
+- [HD-38 Binary Water Detection](code/water_sensor_binary.ino)
+- [BMI270 IMU Measurement](code/imu_motion_test.ino)
+- [IMU Sea-State Classification](code/imu_sea_state.ino)
