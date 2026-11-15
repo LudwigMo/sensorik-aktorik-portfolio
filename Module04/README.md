@@ -293,3 +293,67 @@ We recommend two binary water detectors installed at different heights. The lowe
 **Overall Recommendation**
 
 We conclude that no single sensing principle is suitable for every tank. Continuous sensing is useful when remaining volume matters, while binary or threshold-based sensing is more appropriate for overflow prevention and water-presence detection. Independent failsafe sensors improve the robustness of critical alarms.
+
+### 9. Theory Report
+
+#### Ultrasonic Measurement
+
+We used the HC-SR04 sensor to measure the distance between the sensor and the water surface. The sensor emits an ultrasonic pulse and measures the time required for the reflected signal to return.
+
+We calculated the distance using:
+
+\[
+d = \frac{v \cdot t}{2}
+\]
+
+where \(v\) is the speed of sound and \(t\) is the measured round-trip time.
+
+We estimated the liquid level using:
+
+\[
+h = d_0 - d
+\]
+
+where \(d_0\) is the empty-container distance.
+
+#### Calibration and Validation
+
+We used seven calibration points to establish the relationship between measured distance and water volume. We estimated the water volume from its mass using the approximation 1 g ≈ 1 mL.
+
+Because the calibration points were not evenly spaced, we used piecewise linear interpolation instead of assuming a constant relationship between level and volume.
+
+For validation, we compared the estimated volume of 213.83 mL with a reference volume of approximately 219 mL. The relative deviation was 2.36%.
+
+#### Binary Water Detection
+
+We used the HD-38 sensor to detect electrical conductivity between two metal probes.
+
+The sensor module compares the probe signal with an adjustable threshold and provides a digital output.
+
+We observed:
+
+- Dry: DO = 1
+- Wet: DO = 0
+- Trigger immersion depth: approximately 0.3 cm
+
+We implemented a 300 ms software debounce to confirm stable state changes.
+
+#### IMU Motion Detection
+
+We used the BMI270 IMU to measure acceleration along three axes and calculate the acceleration magnitude.
+
+We classified simulated boat motion using the mean absolute deviation from 1 g within a short measurement window.
+
+We observed that our selected thresholds could distinguish stationary, gentle-motion, and rough-motion conditions, although occasional misclassification occurred near the threshold.
+
+#### Uncertainty and Limitations
+
+We identified several sources of uncertainty:
+
+- Ultrasonic reflections from the container walls and liquid surface
+- Foam, liquid movement, and sensor alignment
+- Manual volume measurement and scale accuracy
+- Changes in water conductivity and probe condition
+- Motion-classification thresholds and sampling limitations
+
+We conclude that calibration, filtering, debounce, and independent failsafe sensors can improve measurement reliability. However, further testing would be required before applying these principles to real marine tanks.
