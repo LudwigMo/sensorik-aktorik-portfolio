@@ -4,8 +4,6 @@ In this module, we explore liquid-level measurement using ultrasonic and conduct
 
 We use an HC-SR04 ultrasonic sensor, an HD-38 water sensor, and a BMI270 IMU to perform experiments and evaluate suitable sensing solutions for four tanks on a sailing yacht.
 
-Module description
-
 ## Learning Goals
 
 > **How to use the learning goals.** Copy the module's learning goals from the course workbook into the block below. Keep the `LG1`, `LG2`, … IDs and a one-word keyword. In each task, write `Proves: LG2` (or link to `[LG2](#lg2)`) so you can find the evidence quickly at checkpoint time. In the **Evidence** line under each goal, link to the task that proves it.
