@@ -525,3 +525,26 @@ Our laboratory tests demonstrated ultrasonic and binary sensing principles. The 
 - [HD-38 Binary Water Detection](code/water_sensor_binary.ino)
 - [BMI270 IMU Measurement](code/imu_motion_test.ino)
 - [IMU Sea-State Classification](code/imu_sea_state.ino)
+
+
+## Contribution Note
+
+We completed the experimental work, sensor selection, data analysis, and documentation for Module 4 independently.
+
+We built and tested the HC-SR04 ultrasonic measurement system, performed volume calibration and validation, and investigated the effects of foam and container tilt.
+
+We also implemented binary water detection using the HD-38 sensor and motion classification using the BMI270 IMU.
+
+Finally, we prepared the Decision Sheet, Test Cards, Recommendation Report, Theory Report, and Industrial Transfer analysis.
+
+## Reflection
+
+In this module, we learned that selecting a suitable sensor depends not only on the measurement principle but also on the liquid properties, operating conditions, and possible failure modes.
+
+We successfully calibrated the ultrasonic sensor and obtained a relative deviation of 2.36% in one independent validation test. However, foam, unwanted reflections, and liquid movement affected measurement stability.
+
+During the binary sensor experiment, we encountered a loose power connection and learned the importance of checking electrical connections and adjusting detection thresholds.
+
+Our IMU experiments demonstrated how different motion conditions can be classified using acceleration data, although the selected thresholds still require further validation.
+
+Overall, we learned that calibration, filtering, software debounce, and independent safety sensors are important for reliable liquid-level monitoring.
