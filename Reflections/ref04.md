@@ -1,11 +1,29 @@
-**Limitations**
+# Reflection 04 – Liquid Measurement & Sensor Selection
 
-The HD-38 detects electrical conductivity between its metal probes rather than measuring the exact liquid level.
+## Take-away
 
-We initially encountered a loose power connection, which caused invalid readings. After restoring the 3.3 V supply and adjusting the potentiometer, the sensor successfully distinguished between dry and wet conditions.
+We learned that sensor selection depends on the liquid properties, measurement requirements, and operating conditions. Calibration, filtering, and independent safety mechanisms are essential for reliable liquid-level monitoring.
 
-We implemented a 300 ms software debounce to reduce unwanted switching caused by short signal fluctuations. However, debouncing is not equivalent to hysteresis. Debouncing requires a stable signal over time, whereas hysteresis uses different thresholds for switching between states.
+## What was good?
 
-Although we adjusted the detection threshold using the potentiometer, we did not implement or experimentally verify separate wet and dry thresholds. This remains a possible improvement for future experiments.
+We successfully tested continuous ultrasonic measurement, binary water detection, and IMU-based motion classification. Our volume calibration produced a relative deviation of 2.36% in one independent validation test.
 
-The switching behavior may also be affected by water conductivity, probe contamination, and corrosion. Therefore, the HD-38 is suitable for our laboratory demonstration but would require additional validation before use in a real marine environment.
+## What was difficult?
+
+Foam, liquid movement, and container tilt caused unstable ultrasonic readings. We also encountered a loose power connection during the HD-38 experiment, which initially caused incorrect readings.
+
+## Exploration and show stoppers
+
+We explored how different conditions affected sensor reliability. Comparing raw and filtered ultrasonic readings was particularly useful. We also found that motion classification could occasionally be incorrect near the selected thresholds.
+
+## Interaction with peers and instructors
+
+We worked independently on the experiments and documentation. The course instructions helped us structure our measurements and compare different sensor principles.
+
+## How did you verify AI suggestions?
+
+We used AI assistance to understand sensor connections, develop Arduino code, and organize our calibration calculations. We verified the suggestions through actual sensor readings, serial output, and measurements using a ruler and a digital scale. We corrected inconsistent calibration values and adjusted the sensor setup based on our observations.
+
+## Help and extra work
+
+We completed the experiments, calibration, sensor selection, and GitHub documentation independently. We also investigated additional failure conditions, including foam, tilt, and sensor connection problems.
