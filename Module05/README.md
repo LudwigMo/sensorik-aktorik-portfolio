@@ -9,7 +9,7 @@ We used an ESP32 to dim a single LED with PWM, mix colours on an RGB LED, and co
 | LG1 — LED current limiting | [Task 1](#task-1-pwm-fade), [Task 2](#task-2-rgb-led) |
 | LG2 — PWM dimming | [Task 1](#task-1-pwm-fade) |
 | LG3 — Additive colour mixing | [Task 2](#task-2-rgb-led) |
-| LG4 — Reproducible PlatformIO projects | [Task 1 code](task1_led/), [Task 2 code](task2_rgb/), [Task 3 code](task3_strip/) |
+| LG4 — Reproducible PlatformIO projects | [Task 1 code](codes/task1_led/), [Task 2 code](codes/task2_rgb/), [Task 3 code](codes/task3_strip/) |
 | LG5 — Individual pixel control | [Task 3](#task-3-neopixel-stick) |
 | LG6 — Current measurement and power budgeting | [Task 3](#task-3-neopixel-stick) |
 
