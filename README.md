@@ -33,9 +33,9 @@ For collaborative tasks, I document my own contributions and link to my partner'
 | Module | Documentation | Reflection |
 |---|---|---|
 | PreStudy | [PreStudy](PreStudy/README.md) | — |
-| Module 1 | [Module 1]([PARTNER_MODULE01_LINK](https://github.com/HaochengFeng1217/sensors-portfolio/tree/main/Module01)) | [Reflection 1](Reflections/ref01.md) |
+| Module 1 | [Module 1](https://github.com/HaochengFeng1217/sensors-portfolio/tree/main/Module01) | [Reflection 1](Reflections/ref01.md) |
 | Module 2 | [Module 2](Module02/README.md) | [Reflection 2](Reflections/ref02.md) |
-| Module 3 | [Module 3]([PARTNER_MODULE03_LINK)](https://github.com/HaochengFeng1217/sensors-portfolio/tree/main/Module03) | [Reflection 3](Reflections/ref03.md) |
+| Module 3 | [Module 3](https://github.com/HaochengFeng1217/sensors-portfolio/tree/main/Module03) | [Reflection 3](Reflections/ref03.md) |
 | Module 4 | [Module 4](Module04/README.md) | [Reflection 4](Reflections/ref04.md) |
 | Module 5 | [Module 5](Module05/README.md) | [Reflection 5](Reflections/ref05.md) |
 
