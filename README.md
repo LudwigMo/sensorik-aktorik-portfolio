@@ -22,7 +22,7 @@ I aim to improve my programming, problem-solving, and technical documentation sk
 
 ## Collaboration
 
-**My partner:** HaochengFENG – [GitHub Portfolio]([PARTNER_PORTFOLIO_LINK](https://github.com/HaochengFeng1217/sensors-portfolio))
+**My partner:** HaochengFENG – [GitHub Portfolio](https://github.com/HaochengFeng1217/sensors-portfolio)
 
 Some modules were completed in collaboration with my partner. The corresponding documentation and source code are linked below.
 
