@@ -17,6 +17,8 @@ We used an ESP32 to dim a single LED with PWM, mix colours on an RGB LED, and co
 
 We connected GPIO16 (`RX2`) to the LED anode through a 220 Ω resistor and connected the cathode to `GND`. The program increased the PWM value from 0 to 255 and then decreased it back to 0. The LED repeatedly faded in and out.
 
+[Watch the LED fade in and out](pictures/task1-pwm-fade.mp4)
+
 ## Task 2: RGB LED
 
 We used a common-cathode RGB module with one onboard 150 Ω resistor per channel. We connected `R` to GPIO16 (`RX2`), `G` to GPIO17 (`TX2`), `B` to GPIO18 (`D18`), and `−` to `GND`.
@@ -30,6 +32,11 @@ We switched on one channel at a time, measured the voltage across its onboard re
 | Red | `255 0 0` | 1.11 V | 7.4 mA |
 | Green | `0 255 0` | 0.65 V | 4.3 mA |
 | Blue | `0 0 255` | 0.56 V | 3.7 mA |
+
+[Serial monitor screenshot — RGB commands and input validation](pictures/task2-serial.jpg)
+
+![RGB LED module during the colour test](pictures/task2-rgb.jpg)
+
 
 ## Task 3: NeoPixel stick
 
@@ -47,6 +54,11 @@ We inserted a UNI-T UT131C multimeter in series between `VIN` and the stick's po
 | Eight pixels set to white | 0.09 A |
 
 The meter's display step was 0.01 A on this range. A small standby current could therefore appear as 0.00 A.
+
+[Serial monitor screenshot — individual pixel control and clear command](pictures/task3-serial.jpg)
+
+![Eight NeoPixel LEDs set to white with the multimeter displaying 0.09 A](pictures/task3-current.jpg)
+
 
 ### Power budget
 
