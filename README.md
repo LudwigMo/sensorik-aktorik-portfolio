@@ -8,7 +8,7 @@ The portfolio includes technical documentation, source code, experimental result
 
 ## About Me
 
-**Name:** ZhenningYU
+**Name:** ZhenningYU 
 **University:** Hochschule Bielefeld (HSBI)  
 **Degree Program:** Digital Technologies  
 **Course:** Sensorik & Aktorik
