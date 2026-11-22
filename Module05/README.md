@@ -117,6 +117,37 @@ The USB-fed `VIN` setup powered all eight pixels at the tested output limit. Und
 - [NeoPixel serial test screenshot](./pictures/task3-serial.jpg)
 - [Current measurement photo showing 0.09 A](./pictures/task3-current.jpg)
 
+## Task 5: Group Exchange and Evidence
+
+### Comparison of Our Results
+
+- We both observed the single LED fade in and out using PWM on GPIO16. Mo used PlatformIO, and Haocheng used Arduino IDE for this task.
+- We calculated similar RGB channel currents from the voltage drops across the onboard 150 Ω resistors.
+
+| Channel | Mo | Haocheng |
+|---|---:|---:|
+| Red | 7.4 mA | 7.53 mA |
+| Green | 4.3 mA | 4.40 mA |
+| Blue | 3.7 mA | 3.87 mA |
+
+- We both recorded 0.09 A with all eight NeoPixel LEDs set to white and an output limit of 80/255. Both measurements covered the LED strip supply branch and excluded the ESP32.
+- In both setups, the meter displayed 0.00 A after `clear` on the 10 A range. The meter displayed current in 0.01 A steps, so a smaller standby current could appear as zero.
+
+### Proposed Shared Takeaway
+
+We can compare LED current readings more meaningfully when we record the number of active pixels, the colour, the brightness setting, and the point in the circuit where we measured current.
+
+### Portfolio Evidence
+
+- [Zhenning’s NeoPixel current measurement photo](./pictures/task3-current.jpg)
+- [Haocheng’s Module 5 experiment records](https://github.com/HaochengFeng1217/sensors-portfolio/tree/main/Module05#experiment-records)
+
+We selected the photo for discussion because it shows all eight pixels lit white and the 0.09 A reading in the same frame.
+
+### How We Checked an AI Suggestion
+
+The initial wiring guidance assumed three external 220 Ω resistors for the RGB LED. We checked the actual module and found three onboard resistors marked `151`, which indicates a nominal resistance of 150 Ω. We used 150 Ω to calculate the channel currents from our measured voltage drops.
+
 ## Study log
 
 - **Task 1.** We observed that changing the PWM duty cycle changed the apparent brightness of the LED.
