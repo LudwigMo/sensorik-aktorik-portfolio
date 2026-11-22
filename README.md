@@ -1,77 +1,78 @@
-# Personal Portfolio for the IoT/MCU class <at university/school>
+# Personal Portfolio – Sensorik & Aktorik
 
-> When you start editing this file, remove this description.
->
-> Use this repository as a **template** (do not fork it).
-> Everything that you do for this class should be documented here
-> as well as include documented links for the work of your peers.
-> This is an artifact that you can come back to any time later to
-> connect and remember this class. It might even come in handy for
-> a job application where projects are more important than grades. 
-> Make this portfolio **public** (or at least readable by your instructor) and share it with your peers
-> (initially you will have a partner, later several team or group-mates).
-> You will mainly document your own work in this git repository.
-> If you work on a module in a team and distribute several tasks among your peers,
-> just link to your peer's task into their github repository. When linking, describe
-> in one sentence what you understood that your peer did in this task.
-> Your peers should respectively link back to you, so that for each one
-> there is a full module description that can be assessed individually.
-> 
-> Make sure to follow good git etiquette in this repository.
-> The only binaries that are allowed to be checked in are images
-> and GIFs (small animations), exception: tables can be done as pdf
-> or google sheet link but are preferred in markup.
-> This means, no zip, jar, word, libre office documents or PDFs in
-> should be checked into this repository.
-> Documentation has to be written in markdown or restructured text.
-> PDFs, google documents, or videos can be linked,
-> but cannot include "personal" documentation.
-> Pictures you took in class but also links to pictures or videos are welcome.
-> If you have hand written notes, just add them as image
-> (or process them with an AI tool into markup).
->  
-> For the final project consider having its own repository, but still document
-> your own work here and link to the produced artifacts in that project repository.
->
-> Start with the optional `PreStudy/` folder (if your class has a pre-study) and then Module 1: have a small log (keywords are fine, we appreciate sentences, but can read keywords quicker as you usually have to present your tasks to an instructor this is more a help for yourself than for us) and pictures from class and lab tasks in here.
->
-> **`Module01` and `Module02` are examples** from the IoT introduction class. Adjust their headings, tasks, and reflections to match your actual course content.
-> Create further modules as `Module03`, `Module04`, … — always a capital `M` and two digits, matching `Module01` and `Module02`.
-> Use [ModuleNN.md](ModuleNN.md) as the content template for a new module; copy it into `Module03/README.md`, `Module04/README.md`, … and fill in the placeholders.
->
-> **`PreStudy/` is optional.** Not all classes have a pre-study. If yours does not, simply delete the folder and remove it from the table of contents.
-> Any code goes into git repo (needs to be linked in portfolio). If you use example codes without changes, you can also link to it.
->
-> Resources:
-> - A nice markdown cheatsheet: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-> - The beginner's guide to git & github: https://www.freecodecamp.org/news/the-beginners-guide-to-git-github/
-> - Slightly longer git-intro tutorial video: https://youtu.be/8Dd7KRpKeaE
-> - If you want to take a class on git and even potentially get certified:
->   https://education.github.com/experiences/foundations_certificate
+Welcome to my personal portfolio for the **Sensorik & Aktorik (Sensors and Actuators)** course at **Hochschule Bielefeld (HSBI)**.
 
-Author: <replace these pointy brackets with your full name>
+This repository documents my learning progress, practical experiments, programming exercises, and project work throughout the semester.
 
-My partner is <replace these pointy brackets with their full name>, [portfolio link](https://github.com/partner/iot-portfolio)
+The portfolio includes technical documentation, source code, experimental results, personal reflections, and links to collaborative work with my partner.
 
-In my team for the final project, I also had the following members:
-- <replace these pointy brackets with their full name>, [portfolio link](https://github.com/partner/iot-portfolio)
-- <replace these pointy brackets with their full name>, [portfolio link](https://github.com/partner/iot-portfolio)
+## About Me
 
-Our team final project repository is [here](https://github.com/somewhere/final-iot-project)
+**Name:** ZhenningYU
+**University:** Hochschule Bielefeld (HSBI)  
+**Degree Program:** Digital Technologies  
+**Course:** Sensorik & Aktorik
 
-My personal profile and expectations, you can find [here](Module01/README.md#task-personal-profile).
+My goal in this course is to develop a better understanding of sensors, actuators, microcontrollers, and embedded systems through practical experiments.
+
+I aim to improve my programming, problem-solving, and technical documentation skills while gaining hands-on experience with real hardware and measurement techniques.
+
+## Collaboration
+
+**My partner:** HaochengFENG – [GitHub Portfolio](PARTNER_PORTFOLIO_LINK)
+
+Some modules were completed in collaboration with my partner. The corresponding documentation and source code are linked below.
+
+For collaborative tasks, I document my own contributions and link to my partner's work where appropriate.
 
 ## Table of Contents
 
-- [Pre-study (optional)](PreStudy/README.md)
-- [Module 1: IoT Introduction — example](Module01/README.md), 
-  [Reflection 1](Reflections/ref01.md)
-- [Module 2: Hardware and Basic Electronics — example](Module02/README.md),
-  [Reflection 2](Reflections/ref02.md), [Reflection 3](Reflections/ref03.md)
-- ...
+| Module | Documentation | Reflection |
+|---|---|---|
+| PreStudy | [PreStudy](PreStudy/README.md) | — |
+| Module 1 | [Module 1](PARTNER_MODULE01_LINK) | [Reflection 1](Reflections/ref01.md) |
+| Module 2 | [Module 2](Module02/README.md) | [Reflection 2](Reflections/ref02.md) |
+| Module 3 | [Module 3](PARTNER_MODULE03_LINK) | [Reflection 3](Reflections/ref03.md) |
+| Module 4 | [Module 4](Module04/README.md) | [Reflection 4](Reflections/ref04.md) |
+| Module 5 | [Module 5](Module05/README.md) | [Reflection 5](Reflections/ref05.md) |
 
-## Miscellanious
+## Learning Objectives
 
-- [Hardware in my/our possession](Hardware/README.md)
+Throughout this course, I aim to:
 
+- Understand the fundamental principles of sensors and actuators.
+- Gain practical experience with ESP32 microcontrollers.
+- Learn how to collect, process, and analyze sensor data.
+- Understand communication protocols such as I2C and SPI.
+- Develop and test embedded software using appropriate development tools.
+- Improve my ability to troubleshoot hardware and software problems.
+- Strengthen my technical documentation and collaboration skills.
+
+## Project Work
+
+**Project Concept: Smart Parking Barrier System**
+
+As part of the course, I selected a smart parking barrier system as a project concept.
+
+The idea is to use sensors and a microcontroller to detect vehicles and control a parking barrier automatically.
+
+Further project development and documentation will be added as the course progresses.
+
+## Reflections
+
+My reflections document what I learned, the challenges I encountered, how I solved technical problems, and how I verified experimental results.
+
+The reflection files are available in the [Reflections](Reflections/) directory.
+
+## Hardware and Software
+
+An overview of the hardware components and development tools used throughout the course is available here:
+
+[Hardware in My Possession](Hardware/README.md)
+
+## Repository Purpose
+
+This portfolio serves as a record of my practical learning experience throughout the course.
+
+It allows me to review previous experiments, reflect on technical challenges, and demonstrate my progress in embedded systems development.
 
