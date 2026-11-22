@@ -8,9 +8,12 @@ The portfolio includes technical documentation, source code, experimental result
 
 ## About Me
 
-**Name:** ZhenningYU 
-**University:** Hochschule Bielefeld (HSBI)  
-**Degree Program:** Digital Technologies  
+**Name:** ZhenningYU
+
+**University:** Hochschule Bielefeld (HSBI)
+
+**Degree Program:** Digital Technologies 
+
 **Course:** Sensorik & Aktorik
 
 My goal in this course is to develop a better understanding of sensors, actuators, microcontrollers, and embedded systems through practical experiments.
